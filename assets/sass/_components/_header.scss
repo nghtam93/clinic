@@ -162,6 +162,7 @@ header {
             height: 12px;
             border-radius: 50%;
             opacity: 1 !important;
+            content: '';
           }
           &:hover {
             &:before {
