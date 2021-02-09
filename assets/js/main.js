@@ -46,6 +46,18 @@ $(document).ready(function(){
   // Custom scroll
   $(".custom-scroll").mCustomScrollbar();
 
+  $(window).on('load resize', function() {
+    var maxHeight = -1;
+
+    $('.sec-service .service-image').each(function() {
+      maxHeight = maxHeight > $(this).height() ? maxHeight :     $(this).height();
+    });
+
+    $('.sec-service .service-image').each(function() {
+      $(this).height(maxHeight);
+    });
+  })
+
 });
 
 var wow = new WOW(

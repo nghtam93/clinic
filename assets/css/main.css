@@ -104,6 +104,9 @@ section {
 .mCSB_inside > .mCSB_container {
   margin-right: 15px; }
 
+.mb0 {
+  margin-bottom: 0 !important; }
+
 .mCS-dark.mCSB_scrollTools {
   opacity: 1; }
   .mCS-dark.mCSB_scrollTools .mCSB_draggerContainer {
@@ -176,6 +179,16 @@ section {
   .pagetop.active {
     opacity: 1;
     transform: translateX(0); }
+
+.map-container {
+  position: relative;
+  padding-top: 70%; }
+  .map-container iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0; }
 
 @media (min-width: 768px) {
   .container {
@@ -357,7 +370,8 @@ header .main-banner .slick-dots {
       width: 12px;
       height: 12px;
       border-radius: 50%;
-      opacity: 1 !important; }
+      opacity: 1 !important;
+      content: ''; }
     header .main-banner .slick-dots li button:hover:before {
       background-color: #8f7c6d; }
     header .main-banner .slick-dots li.slick-active button:before {
@@ -582,7 +596,7 @@ header.sticky-header {
     line-height: 1.3636363636;
     color: #4e3423; }
 .sec-calendar .item-tel {
-  background-color: #ddd3c3;
+  background-color: rgba(237, 230, 214, 0.6);
   display: table;
   border-radius: 34px;
   padding: 10px 25px;
@@ -627,5 +641,190 @@ header.sticky-header {
     transform: translateY(-50%); }
   .sec-calendar .social a:hover {
     opacity: 0.6; }
+
+.sec-emphasis {
+  position: relative;
+  background: url("../images/emphasis_bg01.png") no-repeat center center/cover;
+  padding: 50px 0;
+  min-height: 668px;
+  display: flex;
+  align-items: center;
+  overflow: visible;
+  z-index: 2; }
+  .sec-emphasis h2 {
+    margin-bottom: 50px; }
+
+.sec-greeting {
+  background: url("../images/greeting_bg01.png") no-repeat bottom center/cover;
+  padding: 200px 0 145px;
+  margin-top: -130px;
+  letter-spacing: 1.5px; }
+  .sec-greeting [class*="col-"] + [class*="col-"] {
+    padding-top: 45px; }
+  .sec-greeting h2 {
+    margin-bottom: 40px; }
+  .sec-greeting h3 {
+    color: #454443;
+    margin-bottom: 20px;
+    line-height: 1.4; }
+  .sec-greeting p {
+    line-height: 1.875; }
+    .sec-greeting p:not(:last-child) {
+      margin-bottom: 30px; }
+  .sec-greeting .avatar {
+    margin-bottom: 15px; }
+    .sec-greeting .avatar img {
+      max-width: 90%; }
+  .sec-greeting .user-content {
+    max-width: 275px;
+    margin: 0 auto; }
+    .sec-greeting .user-content .name {
+      line-height: 1.3666666667;
+      margin-bottom: 20px; }
+      .sec-greeting .user-content .name strong {
+        font-size: 30px; }
+    .sec-greeting .user-content .info-item {
+      line-height: 1.875; }
+      .sec-greeting .user-content .info-item:not(:last-child) {
+        margin-bottom: 25px; }
+      .sec-greeting .user-content .info-item__title {
+        font-weight: bold;
+        border-bottom: 1px solid #454443;
+        padding-bottom: 5px;
+        margin-bottom: 15px; }
+
+.sec-feature .row:not(:last-child) {
+  margin-bottom: 55px; }
+.sec-feature h2 {
+  margin-bottom: 65px; }
+.sec-feature h3 {
+  color: #454443;
+  line-height: 1.4;
+  margin-bottom: 25px; }
+  .sec-feature h3 .numb {
+    display: block;
+    color: #d3884e;
+    font-size: 40px; }
+.sec-feature .feature-content {
+  max-width: 500px;
+  margin: 0 auto; }
+
+.sec-medical {
+  background: url("../images/medical_bg001.png") no-repeat center center;
+  background-size: 100% 100%;
+  padding: 120px 0 180px; }
+  .sec-medical h2 {
+    margin-bottom: 70px; }
+  .sec-medical .medical-list__item {
+    font-size: 18px;
+    font-weight: bold;
+    color: #5f4731;
+    line-height: 1.3333333333; }
+    .sec-medical .medical-list__item .item-image {
+      width: 114px;
+      height: 114px;
+      border-radius: 50%;
+      background-color: #f4eae1;
+      margin: 0 auto 10px; }
+
+.sec-map .row:not(:last-child) {
+  margin-bottom: 40px; }
+.sec-map .map-info {
+  border-radius: 30px;
+  background-color: #f5efe4;
+  padding: 30px; }
+  .sec-map .map-info__map .map-container {
+    border-radius: 30px;
+    overflow: hidden; }
+  .sec-map .map-info dl dt {
+    width: 100px;
+    clear: left;
+    float: left;
+    margin: 0;
+    color: #be724a;
+    padding: 15px 10px 15px 3px; }
+    .sec-map .map-info dl dt:first-child {
+      padding-top: 0; }
+    .sec-map .map-info dl dt + dd {
+      padding-left: 100px; }
+  .sec-map .map-info dl dd {
+    padding: 15px 8px 15px 0; }
+    .sec-map .map-info dl dd:nth-child(2) {
+      padding-top: 0; }
+    .sec-map .map-info dl dd:not(:last-child) {
+      border-bottom: 1px solid #454443; }
+    .sec-map .map-info dl dd a {
+      color: #454443; }
+
+.sec-service {
+  background: url("../images/medical_bg001.png") no-repeat center center;
+  background-size: 100% 100%;
+  padding: 150px 0 160px;
+  letter-spacing: 1.5px; }
+  .sec-service .service-image {
+    margin-bottom: 20px; }
+  .sec-service h4 {
+    font-size: 24px;
+    color: #c57638;
+    font-weight: bold;
+    background-color: rgba(245, 239, 228, 0.6);
+    padding: 16px 20px;
+    border-radius: 31px;
+    margin-bottom: 20px; }
+
+.sec-cooperate .row:not(:last-child) {
+  margin-bottom: 45px; }
+.sec-cooperate h2 {
+  margin-bottom: 50px; }
+.sec-cooperate .cooperate-item {
+  background-color: #f2efe7;
+  border-radius: 20px;
+  padding: 25px;
+  color: rgba(69, 68, 67, 0.3); }
+
+.sec-sns .row:not(:last-child) {
+  margin-bottom: 45px; }
+.sec-sns h2 {
+  margin-bottom: 40px; }
+.sec-sns h3 {
+  color: #454443;
+  line-height: 1.4666666667;
+  border-bottom: 1px solid #454443;
+  margin-bottom: 20px; }
+.sec-sns .sns-wrap {
+  color: #4e3423;
+  font-size: 14px;
+  min-height: 400px;
+  font-weight: bold;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f2efe7; }
+
+@media (min-width: 768px) {
+  .sec-medical .medical-list__item {
+    width: calc((100% - 80px) / 5); }
+    .sec-medical .medical-list__item:not(:nth-child(5n)) {
+      margin-right: 20px; }
+    .sec-medical .medical-list__item:nth-child(n+6) {
+      margin-top: 50px; }
+
+  .sec-map .map-info__map {
+    width: 47%;
+    margin-right: 4.5%; }
+    .sec-map .map-info__map .map-container {
+      padding-top: 0;
+      height: calc(100% - 90px);
+      margin-bottom: 40px; }
+  .sec-map .map-info__text {
+    width: 48.5%; }
+
+  .sec-service .service-content {
+    max-width: 354px;
+    margin: 0 auto; }
+
+  .sec-cooperate [class*="col-"]:nth-child(n+5) {
+    margin-top: 24px; } }
 
 /*# sourceMappingURL=main.css.map */
