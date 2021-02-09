@@ -43,6 +43,8 @@ $(document).ready(function(){
 		return false;
 	});
 
+  // Custom scroll
+  $(".custom-scroll").mCustomScrollbar();
 
 });
 

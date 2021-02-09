@@ -94,11 +94,11 @@
           <div class="col-4">
             <h2><span>ＮEWS</span>お知らせ</h2>
             <div class="text-center">
-              <p class="button"><a href="">WEB予約</a></p>
+              <p class="button"><a href="">一覧はこちら</a></p>
             </div>
           </div>
           <div class="col-8">
-            <dl class="sec-news-scroll">
+            <dl class="sec-news-scroll custom-scroll" data-mcs-theme="dark">
               <dt>2020.12.18</dt>
               <dd><a href="">テキスト入りますテキスト入りますテキスト入りますテキスト入りますテキスト入りまト入りますテキスますテキスト入ります</a></dd>
               <dt>2020.12.18</dt>
@@ -120,11 +120,53 @@
     <section class="sec-worktime">
       <div class="container">
         <div class="row">
-          <div class="col-4">
-            abc
+          <div class="col-4 text-center">
+            <div class="worktime-logo"><img src="./assets/images/logo.png" alt="VISCA CLINIC"></div>
+            <p>〒160-0022東京都新宿区新宿6-24-20 <br />KDX新宿六丁目ビル10階</p>
+            <p class="tel"><a href="tel:0352925151"><img src="./assets/images/icon_tel.png" alt="03-5292-5151">03-5292-5151</a></p>
+            <p class="button"><a href="">WEB予約</a></p>
           </div>
           <div class="col-8">
-            abc
+            <table class="table-schedule">
+              <thead>
+                <tr>
+                  <th>診療時間</th>
+                  <th>月</th>
+                  <th>火</th>
+                  <th>水</th>
+                  <th>木</th>
+                  <th>金</th>
+                  <th>土</th>
+                  <th>日</th>
+                  <th>祝</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>9:00～13:00</th>
+                  <td>●</td>
+                  <td>●</td>
+                  <td>●</td>
+                  <td>／</td>
+                  <td>／</td>
+                  <td>●</td>
+                  <td>●</td>
+                  <td>／</td>
+                </tr>
+                <tr>
+                  <th>14:00～19:00</th>
+                  <td>●</td>
+                  <td>●</td>
+                  <td>●</td>
+                  <td>／</td>
+                  <td>／</td>
+                  <td>●</td>
+                  <td>★</td>
+                  <td>／</td>
+                </tr>
+              </tbody>
+            </table>
+            <p class="info"><span>休診日：木曜・日曜・祝日</span><span>★：土曜午後は18時まで</span></p>
           </div>
         </div>
       </div>
@@ -134,8 +176,41 @@
       <div class="container">
         <h2><span>CALENDAR</span>ビスカ歯科クリニック の診療カレンダー</h2>
         <div class="row">
-          <div class="col-12">
+          <div class="col-7">
 
+          </div>
+          <div class="col-5">
+            <h3>待ち時間の軽減のため、<br />予約優先で診療を行っております</h3>
+            <div class="calendar-info__item text-center">
+              <h4>お電話でのご予約</h4>
+              <div class="item-tel">
+                <p>ビスカ ビスカ</p>
+                <p class="tel"><a href="tel:0352925151"><img src="./assets/images/icon_tel.png" alt="03-5292-5151">03-5292-5151</a></p>
+              </div>
+              <p>［受付時間］9:00〜19:00（木曜・日・祝日は除く）</p>
+            </div>
+            <div class="calendar-info__item">
+              <h4>インターネットでご予約<br />（24時間受付）</h4>
+              <div class="qr-wrap">
+                <div class="qr-wrap__text">
+                  <p>スマートフォンご利用の<br />方はQRコードの読み込みか<br />らもご予約できます。</p>
+                  <p class="button"><a href="">ご予約はこちら</a></p>
+                </div>
+                <div class="qr-wrap__image"><img src="./assets/images/qr.png" alt="インターネットでご予約（24時間受付）"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row social">
+          <div class="col-4">
+            <a href="#"><img src="./assets/images/social_facebook.png" alt="Facebook">Facebook</a>
+          </div>
+          <div class="col-4">
+            <a href="#"><img src="./assets/images/social_twitter.png" alt="Twitter">Twitter</a>
+          </div>
+          <div class="col-4">
+            <a href="#"><img src="./assets/images/social_instagram.png" alt="Instagram">Instagram</a>
           </div>
         </div>
       </div>
@@ -160,6 +235,7 @@
   <!-- end Footer -->
   <script src="./assets/libs/jquery-3.5.1.slim/jquery-3.5.1.slim.min.js"></script>
   <script src="./assets/libs/bootstrap/js/bootstrap.bundle.js"></script>
+  <script src="./assets/libs/scroller/js/jquery.mCustomScrollbar.concat.min.js"></script>
   <script src="./assets/libs/wowjs/js/wow.min.js"></script>
   <script src="./assets/libs/slick_slider/js/slick.min.js"></script>
   <script src="./assets/js/main.js"></script>
