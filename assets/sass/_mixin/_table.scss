@@ -3,21 +3,14 @@ table {
 }
 .table-schedule {
   border-collapse: collapse;
-  font-size: 22px;
   th, td {
     background-color: #f5efe4;
     text-align: center;
-    padding: 13px 15px;
+    vertical-align: middle;
   }
   thead {
     th {
       border-bottom: 1px solid #e7e2d5;
-      &:first-child {
-        border-top-left-radius: 20px;
-      }
-      &:last-child {
-        border-top-right-radius: 20px;
-      }
       &:not(:last-child) {
         border-right: 1px solid #e7e2d5;
       }
@@ -29,20 +22,6 @@ table {
       color: #be724a;
     }
     tr {
-      &:last-child {
-        th, td {
-          &:first-child {
-            border-bottom-left-radius: 20px;
-          }
-        }
-      }
-      &:last-child {
-        th, td {
-          &:last-child {
-            border-bottom-right-radius: 20px;
-          }
-        }
-      }
       &:not(:last-child) {
         th, td {
           border-bottom: 1px solid #e7e2d5;
@@ -51,6 +30,97 @@ table {
       th, td {
         &:not(:last-child) {
           border-right: 1px solid #e7e2d5;
+        }
+      }
+    }
+  }
+}
+
+@media ( min-width: 768px ) {
+  .table-schedule {
+    th, td {
+      padding: 13px 15px;
+    }
+    thead {
+      th {
+        &:first-child {
+          border-top-left-radius: 20px;
+        }
+        &:last-child {
+          border-top-right-radius: 20px;
+        }
+      }
+    }
+    tbody {
+      tr {
+        &:last-child {
+          th, td {
+            &:first-child {
+              border-bottom-left-radius: 20px;
+            }
+          }
+        }
+        &:last-child {
+          th, td {
+            &:last-child {
+              border-bottom-right-radius: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media ( min-width: 1200px ) {
+  .table-schedule {
+    font-size: 22px;
+  }
+}
+
+@media ( max-width: 1199px ) and ( min-width: 992px ) {
+  .table-schedule {
+    font-size: 20px;
+  }
+}
+
+@media ( max-width: 991px ) and ( min-width: 768px ) {
+  .table-schedule {
+    font-size: 14px;
+  }
+}
+
+@media ( max-width: 767px ) {
+  .table-schedule {
+    font-size: vw(22, 750);
+    th, td {
+      padding: vw(10, 750) vw(15, 750);
+    }
+    thead {
+      th {
+        &:first-child {
+          border-top-left-radius: vw(20, 750);
+        }
+        &:last-child {
+          border-top-right-radius: vw(20, 750);
+        }
+      }
+    }
+    tbody {
+      tr {
+        &:last-child {
+          th, td {
+            &:first-child {
+              border-bottom-left-radius: vw(20, 750);
+            }
+          }
+        }
+        &:last-child {
+          th, td {
+            &:last-child {
+              border-bottom-right-radius: vw(20, 750);
+            }
+          }
         }
       }
     }

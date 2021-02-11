@@ -7,6 +7,7 @@
 @import "../libs/slick_slider/css/slick-theme.css";
 
 // Common
+@import "_mixin/function";
 @import "_mixin/reset";
 @import "_mixin/common";
 @import "_mixin/table";
@@ -19,3 +20,4 @@
 
 // Page
 @import "_pages/home";
+@import "_pages/clinic";
