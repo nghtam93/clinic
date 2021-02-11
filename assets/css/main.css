@@ -69,6 +69,13 @@ a {
   body {
     font-size: 2.9333333333vw;
     line-height: 1.6363636364; } }
+h1 {
+  color: #4e3423; }
+  h1 span {
+    display: block;
+    color: #c57638;
+    font-weight: bold; }
+
 h2 {
   position: relative;
   font-family: 'Noto Sans JP', sans-serif;
@@ -222,6 +229,19 @@ h3 {
     width: 90%;
     margin: 0 auto; }
 
+  .page-title__access {
+    background: url("../images/access/access_title_bg.png") no-repeat left center/cover; }
+  .page-title__clinic {
+    background: url("../images/clinic/clinic_title_bg.png") no-repeat left center/cover; }
+  .page-title__information {
+    background: url("../images/information/information_title_bg.png") no-repeat left center/cover; }
+  .page-title__information-detail {
+    background: url("../images/information-detail/information-detail_title_bg.png") no-repeat left center/cover; }
+  .page-title__service {
+    background: url("../images/service/service_title_bg.png") no-repeat left center/cover; }
+  .page-title__staff {
+    background: url("../images/staff/staff_title_bg.png") no-repeat left center/cover; }
+
   .sec__title {
     margin-bottom: 60px;
     padding-bottom: 20px; }
@@ -273,6 +293,22 @@ h3 {
       font-size: 18px; }
       .visca-clinic-page a span {
         padding-top: 10px; } }
+@media (min-width: 1024px) {
+  .page-title {
+    display: flex;
+    align-items: center;
+    border-radius: 60px 0 0 60px; }
+    .page-title h1 {
+      width: 60%;
+      max-width: 790px;
+      display: table;
+      text-align: center;
+      padding: 20px;
+      line-height: 1.25;
+      letter-spacing: 1px; }
+      .page-title h1 span {
+        font-size: 24px;
+        margin-bottom: 10px; } }
 @media (min-width: 1200px) {
   .container {
     max-width: 1224px; }
@@ -291,6 +327,21 @@ h3 {
       height: 18px;
       border-top: 3px solid #fff;
       border-right: 3px solid #fff; } }
+@media (min-width: 1366px) {
+  .page-title {
+    height: 300px; }
+    .page-title h1 {
+      font-size: 64px; } }
+@media (max-width: 1365px) and (min-width: 1200px) {
+  .page-title {
+    height: 300px; }
+    .page-title h1 {
+      font-size: 48px; } }
+@media (max-width: 1199px) and (min-width: 1024px) {
+  .page-title {
+    height: 240px; }
+    .page-title h1 {
+      font-size: 40px; } }
 @media (max-width: 1199px) and (min-width: 768px) {
   .pagetop a {
     width: 66px;
@@ -314,7 +365,23 @@ h3 {
     overflow: hidden; } }
 @media (max-width: 1023px) and (min-width: 768px) {
   .d-tb-none {
-    display: none !important; } }
+    display: none !important; }
+
+  .page-title {
+    height: 260px;
+    margin-left: 30px;
+    margin-bottom: 100px;
+    padding-right: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .page-title h1 {
+      font-size: 56px;
+      text-align: center;
+      padding: 20px; }
+      .page-title h1 span {
+        font-size: 20px;
+        margin-bottom: 10px; } }
 @media (max-width: 991px) and (min-width: 768px) {
   h2 {
     font-size: 28px; }
@@ -327,6 +394,34 @@ h3 {
 
   section:not(:last-child) {
     margin-bottom: 18%; }
+
+  .page-title {
+    height: 26.6666666667vw;
+    margin-left: 4vw;
+    margin-bottom: 13.3333333333vw;
+    padding-right: 4vw;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .page-title__access {
+      background: url("../images/access/sp_access_title_bg.png") no-repeat left center/cover; }
+    .page-title__clinic {
+      background: url("../images/clinic/sp_clinic_title_bg.png") no-repeat left center/cover; }
+    .page-title__information {
+      background: url("../images/information/sp_information_title_bg.png") no-repeat left center/cover; }
+    .page-title__information-detail {
+      background: url("../images/information-detail/sp_information-detail_title_bg.png") no-repeat left center/cover; }
+    .page-title__service {
+      background: url("../images/service/sp_service_title_bg.png") no-repeat left center/cover; }
+    .page-title__staff {
+      background: url("../images/staff/sp_staff_title_bg.png") no-repeat left center/cover; }
+    .page-title h1 {
+      font-size: 8.5333333333vw;
+      text-align: center;
+      padding: 2.6666666667vw; }
+      .page-title h1 span {
+        font-size: 3.2vw;
+        margin-bottom: 1.3333333333vw; }
 
   h2 {
     font-size: 6.1333333333vw;
@@ -564,6 +659,40 @@ table {
         left: 4vw; }
       .paginations .pagination .page-item__next {
         right: 4vw; } }
+.breadcrumbs .breadcrumb {
+  background: none;
+  padding: 0;
+  border-radius: 0; }
+  .breadcrumbs .breadcrumb .breadcrumb-item + .breadcrumb-item {
+    padding-left: 20px; }
+    .breadcrumbs .breadcrumb .breadcrumb-item + .breadcrumb-item:before {
+      content: '>';
+      padding-right: 20px; }
+  .breadcrumbs .breadcrumb .breadcrumb-item a {
+    color: #454443; }
+  .breadcrumbs .breadcrumb .breadcrumb-item.active {
+    color: #454443; }
+
+@media (min-width: 1024px) {
+  .breadcrumbs {
+    padding-right: 10%; }
+    .breadcrumbs .breadcrumb {
+      justify-content: flex-end;
+      margin-bottom: 28px; } }
+@media (max-width: 1023px) and (min-width: 768px) {
+  .breadcrumbs {
+    padding: 10px 30px; }
+    .breadcrumbs .breadcrumb {
+      margin-bottom: 40px; } }
+@media (max-width: 767px) {
+  .breadcrumbs {
+    padding: 1.3333333333vw 4vw; }
+    .breadcrumbs .breadcrumb {
+      margin-bottom: 5.3333333333vw; }
+      .breadcrumbs .breadcrumb .breadcrumb-item + .breadcrumb-item {
+        padding-left: 2.6666666667vw; }
+        .breadcrumbs .breadcrumb .breadcrumb-item + .breadcrumb-item:before {
+          padding-right: 2.6666666667vw; } }
 header .top-bar {
   font-size: 13px;
   border-bottom: 1px solid #bab5b1;
@@ -706,19 +835,33 @@ header.sticky-header {
             display: block; }
     header .main-banner {
       width: 80.3%; }
+    header .main-title {
+      width: 75.8%; }
     header .footer-bar ul li {
       height: 24px; }
       header .footer-bar ul li img {
         width: auto;
         height: 100%; }
     header .company-info {
-      display: none; } }
+      display: none; }
+
+  body:not(.home) header {
+    padding-right: 0;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px; }
+    body:not(.home) header .top-bar, body:not(.home) header .footer-bar {
+      display: none; }
+    body:not(.home) header nav.navbar {
+      padding-top: 0; }
+      body:not(.home) header nav.navbar .navbar-brand {
+        padding-top: 20px; } }
 @media (max-width: 1480px) and (min-width: 1200px) {
-  header nav.navbar {
+  body.home header nav.navbar {
     padding-top: 10px; }
-    header nav.navbar .navbar-brand {
+    body.home header nav.navbar .navbar-brand {
       padding: 15px 0; }
-  header nav.navbar-expand-md .navbar-collapse .navbar-nav li a {
+  body.home header nav.navbar-expand-md .navbar-collapse .navbar-nav li a {
     padding: 10px 20px !important; } }
 @media (max-width: 1199px) and (min-width: 1024px) {
   header {
@@ -753,7 +896,7 @@ header.sticky-header {
       display: block;
       position: absolute;
       width: 100%;
-      height: 166px;
+      height: 90px;
       left: 0;
       top: 0;
       padding: 0;
@@ -770,9 +913,10 @@ header.sticky-header {
         width: 45px;
         padding: 0;
         transition: 0.3s;
-        top: 95px;
+        top: 22px;
         right: 30px;
-        position: absolute; }
+        position: absolute;
+        z-index: 9; }
         header nav.navbar .navbar-toggler span {
           height: 3px;
           width: 45px;
@@ -893,7 +1037,7 @@ header.sticky-header {
       margin: 30px auto;
       max-width: 277px;
       padding: 0;
-      line-height: 1; }
+      line-height: 0; }
     header.sticky-header nav.navbar {
       padding: 20px 15px; }
     header .main-banner {
@@ -908,9 +1052,17 @@ header.sticky-header {
       header .company-info ul {
         justify-content: center; }
 
-  body.home header nav.navbar .navbar-toggler {
-    right: auto;
-    left: 30px; } }
+  body.home header nav.navbar {
+    height: 166px; }
+    body.home header nav.navbar .navbar-toggler {
+      right: auto;
+      left: 30px;
+      top: 95px; }
+    body.home header nav.navbar.active .navbar-toggler {
+      top: 30px; }
+
+  body:not(.home) header nav.navbar {
+    border-bottom: 1px solid #c6c3bd; } }
 @media (max-width: 1023px) and (min-width: 768px) {
   header .top-bar {
     padding: 15px;
@@ -942,7 +1094,9 @@ header.sticky-header {
         max-width: 340px;
         height: 70px;
         border-radius: 35px;
-        margin: 0 auto; } }
+        margin: 0 auto; }
+  header .main-title {
+    margin-top: 90px; } }
 @media (max-width: 767px) {
   header .top-bar {
     padding: 2vw;
@@ -951,11 +1105,12 @@ header.sticky-header {
     margin: 4vw auto;
     max-width: 36.9333333333vw; }
   header nav.navbar {
-    height: 22.1333333333vw; }
+    height: 12vw; }
     header nav.navbar .navbar-toggler {
       width: 6vw;
-      top: 12.6666666667vw;
-      right: 4vw; }
+      top: 2.9333333333vw;
+      right: 4vw;
+      font-size: 2.9333333333vw; }
       header nav.navbar .navbar-toggler span {
         width: 6vw;
         height: 0.4vw; }
@@ -967,6 +1122,13 @@ header.sticky-header {
           width: 4vw;
           height: 0.4vw;
           top: 2.6666666667vw; }
+    header nav.navbar .navbar-toggler[aria-expanded="true"] span:before {
+      width: 4.6666666667vw;
+      top: 0.9333333333vw; }
+    header nav.navbar .navbar-toggler[aria-expanded="true"] span:after {
+      content: "";
+      width: 4.6666666667vw;
+      top: 0.9333333333vw; }
     header nav.navbar ul.navbar-nav li a {
       padding: 6vw 0 !important;
       font-size: 4vw; }
@@ -1037,9 +1199,18 @@ header.sticky-header {
         height: 9.3333333333vw;
         border-radius: 4.6666666667vw;
         margin: 0 auto; }
+  header .main-title {
+    margin-top: 12vw; }
 
-  body.home header nav.navbar .navbar-toggler {
-    left: 4vw; } }
+  body.home header nav.navbar {
+    height: 22.1333333333vw; }
+    body.home header nav.navbar .navbar-toggler {
+      left: 4vw;
+      top: 12.6666666667vw; }
+    body.home header nav.navbar.active {
+      height: 100vh; }
+      body.home header nav.navbar.active .navbar-toggler {
+        top: 4vw; } }
 @keyframes fadeMain {
   0% {
     opacity: 0;

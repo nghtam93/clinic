@@ -229,6 +229,9 @@ header {
     .main-banner {
       width: 80.3%;
     }
+    .main-title {
+      width: 75.8%;
+    }
     .footer-bar {
       ul {
         li {
@@ -244,23 +247,49 @@ header {
       display: none;
     }
   }
+
+  body {
+    &:not(.home) {
+      header {
+        padding-right: 0;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 40px;
+        .top-bar, .footer-bar {
+          display: none;
+        }
+        nav {
+          &.navbar {
+            padding-top: 0;
+            .navbar-brand {
+              padding-top: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 @media ( max-width: 1480px ) and ( min-width: 1200px ) {
-  header {
-    nav {
-      &.navbar {
-        padding-top: 10px;
-        .navbar-brand {
-          padding: 15px 0;
-        }
-      }
-      &.navbar-expand-md {
-        .navbar-collapse {
-          .navbar-nav {
-            li {
-              a {
-                padding: 10px 20px !important;
+  body {
+    &.home {
+      header {
+        nav {
+          &.navbar {
+            padding-top: 10px;
+            .navbar-brand {
+              padding: 15px 0;
+            }
+          }
+          &.navbar-expand-md {
+            .navbar-collapse {
+              .navbar-nav {
+                li {
+                  a {
+                    padding: 10px 20px !important;
+                  }
+                }
               }
             }
           }
@@ -330,7 +359,7 @@ header {
         display: block;
         position: absolute;
         width: 100%;
-        height: 166px;
+        height: 90px;
         left: 0;
         top: 0;
         padding: 0;
@@ -347,9 +376,10 @@ header {
           width: 45px;
           padding: 0;
           transition: 0.3s;
-          top: 95px;
+          top: 22px;
           right: 30px;
           position: absolute;
+          z-index: 9;
           span {
             height: 3px;
             width: 45px;
@@ -503,7 +533,7 @@ header {
         margin: 30px auto;
         max-width: 277px;
         padding: 0;
-        line-height: 1;
+        line-height: 0;
       }
     }
     &.sticky-header {
@@ -538,9 +568,28 @@ header {
     header {
       nav {
         &.navbar {
+          height: 166px;
           .navbar-toggler {
             right: auto;
             left: 30px;
+            top: 95px;
+          }
+          &.active {
+            .navbar-toggler {
+              top: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  body {
+    &:not(.home) {
+      header {
+        nav {
+          &.navbar {
+            border-bottom: 1px solid #c6c3bd;
           }
         }
       }
@@ -599,6 +648,9 @@ header {
         }
       }
     }
+    .main-title {
+      margin-top: 90px;
+    }
   }
 }
 
@@ -614,11 +666,12 @@ header {
         max-width: vw(277, 750);
       }
       &.navbar {
-        height: vw(166, 750);
+        height: vw(90, 750);
         .navbar-toggler {
           width: vw(45, 750);
-          top: vw(95, 750);
+          top: vw(22, 750);
           right: vw(30, 750);
+          font-size: vw(22, 750);
           span {
             width: vw(45, 750);
             height: vw(3, 750);
@@ -631,6 +684,19 @@ header {
               width: vw(30, 750);
               height: vw(3, 750);
               top: vw(20, 750);
+            }
+          }
+        }
+        .navbar-toggler[aria-expanded="true"] {
+          span {
+            &:before {
+              width: vw(35, 750);
+              top: vw(7, 750);
+            }
+            &:after {
+              content: "";
+              width: vw(35, 750);
+              top: vw(7, 750);
             }
           }
         }
@@ -746,13 +812,24 @@ header {
         }
       }
     }
+    .main-title {
+      margin-top: vw(90, 750);
+    }
   }
 
   body.home {
     header {
       nav.navbar {
+        height: vw(166, 750);
         .navbar-toggler {
           left: vw(30, 750);
+          top: vw(95, 750);
+        }
+        &.active {
+          height: 100vh;
+          .navbar-toggler {
+            top: vw(30, 750);
+          }
         }
       }
     }

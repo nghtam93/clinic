@@ -1,3 +1,11 @@
+h1 {
+  color: #4e3423;
+  span {
+    display: block;
+    color: #c57638;
+    font-weight: bold;
+  }
+}
 h2 {
   position: relative;
 	font-family: 'Noto Sans JP', sans-serif;
@@ -170,6 +178,8 @@ h3 {
   }
 }
 
+$pages: 'access', 'clinic', 'information', 'information-detail', 'service', 'staff';
+
 @media ( min-width: 768px ) {
   .d-pc-none {
     display: none !important;
@@ -180,6 +190,13 @@ h3 {
   .pc-w-90per {
     width: 90%;
     margin: 0 auto;
+  }
+  .page-title {
+    @each $page in $pages {
+      &__#{$page} {
+        background: url('../images/#{$page}/#{$page}_title_bg.png') no-repeat left center / cover;
+      }
+    }
   }
   .sec__title {
     margin-bottom: 60px;
@@ -251,6 +268,27 @@ h3 {
   }
 }
 
+@media ( min-width: 1024px ) {
+  .page-title {
+    display: flex;
+    align-items: center;
+    border-radius: 60px 0 0 60px;
+    h1 {
+      width: 60%;
+      max-width: 790px;
+      display: table;
+      text-align: center;
+      padding: 20px;
+      line-height: (80/64);
+      letter-spacing: 1px;
+      span {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
 @media (min-width: 1200px) {
 	.container {
 		max-width: 1224px;
@@ -271,6 +309,33 @@ h3 {
         border-top: 3px solid #fff;
         border-right: 3px solid #fff;
       }
+    }
+  }
+}
+
+@media ( min-width: 1366px ) {
+  .page-title {
+    height: 300px;
+    h1 {
+      font-size: 64px;
+    }
+  }
+}
+
+@media ( max-width: 1365px ) and ( min-width: 1200px ) {
+  .page-title {
+    height: 300px;
+    h1 {
+      font-size: 48px;
+    }
+  }
+}
+
+@media ( max-width: 1199px ) and ( min-width: 1024px ) {
+  .page-title {
+    height: 240px;
+    h1 {
+      font-size: 40px;
     }
   }
 }
@@ -312,6 +377,24 @@ h3 {
   .d-tb-none {
     display: none !important;
   }
+  .page-title {
+    height: 260px;
+    margin-left: 30px;
+    margin-bottom: 100px;
+    padding-right: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    h1 {
+      font-size: 56px;
+      text-align: center;
+      padding: 20px;
+      span {
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+    }
+  }
 }
 
 @media ( max-width: 991px ) and ( min-width: 768px ) {
@@ -330,6 +413,29 @@ h3 {
   section {
     &:not(:last-child) {
       margin-bottom: 18%;
+    }
+  }
+  .page-title {
+    height: vw(200, 750);
+    margin-left: vw(30, 750);
+    margin-bottom: vw(100, 750);
+    padding-right: vw(30, 750);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @each $page in $pages {
+      &__#{$page} {
+        background: url('../images/#{$page}/sp_#{$page}_title_bg.png') no-repeat left center / cover;
+      }
+    }
+    h1 {
+      font-size: vw(64, 750);
+      text-align: center;
+      padding: vw(20, 750);
+      span {
+        font-size: vw(24, 750);
+        margin-bottom: vw(10, 750);
+      }
     }
   }
 	h2 {
