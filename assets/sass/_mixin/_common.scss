@@ -146,6 +146,30 @@ h3 {
 	overflow: hidden;
 }
 
+.visca-clinic-page {
+  a {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
+    color: #454443;
+    transition: 0.3s;
+    img {
+      transition: 0.3s;
+    }
+    span {
+      display: block;
+    }
+    &:hover {
+      color: #4e3423;
+      text-decoration: none;
+      img {
+        opacity: 0.8;
+      }
+    }
+  }
+}
+
 @media ( min-width: 768px ) {
   .d-pc-none {
     display: none;
@@ -214,6 +238,16 @@ h3 {
     border-radius: 30px;
     padding: 30px;
     height: 100%;
+  }
+
+  .visca-clinic-page {
+    margin-bottom: 8% !important;
+    a {
+      font-size: 18px;
+      span {
+        padding-top: 10px;
+      }
+    }
   }
 }
 
@@ -347,6 +381,24 @@ h3 {
         height: vw(18, 750);
         border-top: vw(3, 750) solid #fff;
         border-right: vw(3, 750) solid #fff;
+      }
+    }
+  }
+
+  .visca-clinic-page {
+    margin-bottom: 20% !important;
+    [class*="col-"] {
+      &:not(:last-child) {
+        margin-bottom: vw(60, 750);
+      }
+    }
+    a {
+      font-size: vw(30, 750);
+      img {
+        width: vw(426, 750);
+      }
+      span {
+        padding-top: vw(20, 750);
       }
     }
   }

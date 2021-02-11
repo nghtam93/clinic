@@ -12,6 +12,7 @@
 @import "_mixin/common";
 @import "_mixin/table";
 @import "_mixin/button";
+@import "_mixin/pagination";
 
 // Component
 @import "_components/header";
@@ -21,3 +22,4 @@
 // Page
 @import "_pages/home";
 @import "_pages/clinic";
+@import "_pages/information";
