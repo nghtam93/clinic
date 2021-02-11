@@ -11,7 +11,8 @@ $(document).ready(function(){
 
   /*----header----*/
   $('.navbar .navbar-toggler').click(function() {
-    $('header').toggleClass('active');
+    $('header nav.navbar').toggleClass('active');
+    $('body').toggleClass('hidden');
   });
 	// lastScroll = 0;
 	// $(window).on('scroll',function() {
@@ -56,6 +57,20 @@ $(document).ready(function(){
     $('.sec-service .service-image').each(function() {
       $(this).height(maxHeight);
     });
+  });
+
+  var video = $('.information-detail__content .video').find('video');
+  video.each(function() {
+    $('.information-detail__content .btn-play').on('click', function() {
+      $(this).parents('.information-detail__content .video').addClass('is-play-video');
+      var showVideo = $(this).parents('.information-detail__content').find('video');
+      if (showVideo.get(0).paused) {
+        showVideo.get(0).play();
+        showVideo.prop("controls",true); 
+      } else {
+        showVideo.get(0).pause();
+      }
+    })
   })
 
 });

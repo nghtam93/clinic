@@ -1,16 +1,5 @@
 .information-wrap {
   background-color: #f4eee3;
-}
-
-.information-list {
-  .information-list {
-    &__item {
-      position: relative;
-      &:not(:last-child) {
-        border-bottom: 1px solid #ded8ce;
-      }
-    }
-  }
   .list-info {
     display: flex;
     align-items: center;
@@ -24,8 +13,27 @@
     }
     .cat {
       color: #be724a;
+      .txt-info {
+        position: relative;
+        &:after {
+          content: '|';
+          display: inline-block;
+          vertical-align: text-bottom;
+        }
+      }
       a {
         color: #be724a;
+      }
+    }
+  }
+}
+
+.information-list {
+  .information-list {
+    &__item {
+      position: relative;
+      &:not(:last-child) {
+        border-bottom: 1px solid #ded8ce;
       }
     }
   }
@@ -66,6 +74,27 @@
   .information-wrap {
     padding: 0 5%;
     border-radius: 30px;
+    &:not(.information-list) {
+      padding: 45px 5%;
+    }
+    .list-info {
+      letter-spacing: 1px;
+      margin-bottom: 15px;
+      .date {
+        width: 115px;
+        height: 25px;
+        font-size: 13px;
+        border-radius: 12.5px;
+        margin-right: 20px;
+      }
+      .cat {
+        .txt-info {
+          &:after {
+            margin: 0 18px;
+          }
+        }
+      }
+    }
   }
 
   .information-list {
@@ -101,17 +130,6 @@
         .item-content {
           flex: auto;
         }
-      }
-    }
-    .list-info {
-      letter-spacing: 1px;
-      margin-bottom: 15px;
-      .date {
-        width: 115px;
-        height: 25px;
-        font-size: 13px;
-        border-radius: 12.5px;
-        margin-right: 20px;
       }
     }
     .item-content {
@@ -202,6 +220,22 @@
   .information-wrap {
     padding: vw(40, 750);
     border-radius: vw(30, 750);
+    .list-info {
+      margin-bottom: vw(10, 750);
+      .date {
+        width: vw(185, 750);
+        height: vw(40, 750);
+        border-radius: vw(20, 750);
+        margin-right: vw(12, 750);
+      }
+      .cat {
+        .txt-info {
+          &:after {
+            margin: 0 vw(25, 750);
+          }
+        }
+      }
+    }
   }
   .information-list {
     .information-list {
@@ -213,15 +247,6 @@
         .item-thumb {
           margin-bottom: vw(25, 750);
         }
-      }
-    }
-    .list-info {
-      margin-bottom: vw(10, 750);
-      .date {
-        width: vw(185, 750);
-        height: vw(40, 750);
-        border-radius: vw(20, 750);
-        margin-right: vw(12, 750);
       }
     }
     .item-content {

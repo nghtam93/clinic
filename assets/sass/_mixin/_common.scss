@@ -172,7 +172,7 @@ h3 {
 
 @media ( min-width: 768px ) {
   .d-pc-none {
-    display: none;
+    display: none !important;
   }
   .pc-text-center {
     text-align: center;
@@ -302,6 +302,18 @@ h3 {
   }
 }
 
+@media ( max-width: 1023px ) {
+  body.hidden {
+    overflow: hidden;
+  }
+}
+
+@media ( max-width: 1023px ) and ( min-width: 768px ) {
+  .d-tb-none {
+    display: none !important;
+  }
+}
+
 @media ( max-width: 991px ) and ( min-width: 768px ) {
   h2 {
     font-size: 28px;
@@ -313,7 +325,7 @@ h3 {
 
 @media (max-width: 767px) {
   .d-sp-none {
-    display: none;
+    display: none !important;
   }
   section {
     &:not(:last-child) {
@@ -330,6 +342,14 @@ h3 {
 			text-align: center;
 		}
 	}
+  .sec__title {
+    margin-bottom: vw(80, 750);
+    padding-bottom: vw(15, 750);
+    &:after {
+      width: vw(100, 750);
+      height: vw(2, 750);
+    }
+  }
   h3 {
     font-size: vw(40, 750);
     line-height: (60/40);
