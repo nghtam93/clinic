@@ -2277,6 +2277,10 @@ footer .copyright {
         width: 21.0666666667vw; }
       .visca-clinic .qr-wrap .button a {
         max-width: 50.1333333333vw; } }
+.sec-introduction {
+  background: url("../images/clinic/clinic_bg001.png") no-repeat center center;
+  background-size: 100% 100%; }
+
 .item-clinic .item-clinic__thumb {
   position: relative; }
   .item-clinic .item-clinic__thumb .numb {
@@ -2291,6 +2295,9 @@ footer .copyright {
   text-align: justify; }
 
 @media (min-width: 768px) {
+  .sec-introduction {
+    padding: 90px 0 120px; }
+
   .item-clinic .item-clinic__thumb {
     margin-bottom: 5px; }
     .item-clinic .item-clinic__thumb .numb {
@@ -2317,6 +2324,9 @@ footer .copyright {
   .item-clinic .item-clinic__content h3 {
     margin-bottom: 15px; } }
 @media (max-width: 767px) {
+  .sec-introduction {
+    background: none; }
+
   .item-clinic .item-clinic__thumb {
     margin-bottom: 4vw; }
     .item-clinic .item-clinic__thumb .numb {

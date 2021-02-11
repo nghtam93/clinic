@@ -76,6 +76,61 @@
 
   <!-- Content -->
   <main>
+    <section class="sec-facilities sec-introduction">
+      <h2 class="sec__title">院内紹介</h2>
+      <div class="sec-facilities__slider wow fadeInUp">
+        <div class="slider-item">
+          <div class="slider-item__content">
+            <img src="./assets/images/facilities_img001.png" alt="待合室" class="d-sp-none">
+            <img src="./assets/images/sp_facilities_img001.png" alt="待合室" class="d-pc-none">
+            <div class="item-content">
+              <h3>待合室</h3>
+              <p>明るく清潔感のある空間づくりを心がけております。</p>
+            </div>
+          </div>
+        </div>
+        <div class="slider-item">
+          <div class="slider-item__content">
+            <img src="./assets/images/facilities_img002.png" alt="診療室" class="d-sp-none">
+            <img src="./assets/images/sp_facilities_img002.png" alt="診療室" class="d-pc-none">
+            <div class="item-content">
+              <h3>診療室</h3>
+              <p>まわりの方を気にすることなく治療を受けていただけます。</p>
+            </div>
+          </div>
+        </div>
+        <div class="slider-item">
+          <div class="slider-item__content">
+            <img src="./assets/images/facilities_img003.png" alt="デジタルレントゲン" class="d-sp-none">
+            <img src="./assets/images/sp_facilities_img003.png" alt="デジタルレントゲン" class="d-pc-none">
+            <div class="item-content">
+              <h3>デジタルレントゲン</h3>
+              <p>従来のレントゲンと比べて被ばく量が1/10ほどに抑えられるため、身体への負担が少なく済むことが特徴です。</p>
+            </div>
+          </div>
+        </div>
+        <div class="slider-item">
+          <div class="slider-item__content">
+            <img src="./assets/images/facilities_img004.png" alt="滅菌器" class="d-sp-none">
+            <img src="./assets/images/sp_facilities_img004.png" alt="滅菌器" class="d-pc-none">
+            <div class="item-content">
+              <h3>滅菌器</h3>
+              <p>お口に入る器具はすべてこの滅菌器を通した清潔なものを使い、患者さまごと・使用ごとに取り換え、院内感染防止に努めています。</p>
+            </div>
+          </div>
+        </div>
+        <div class="slider-item">
+          <div class="slider-item__content">
+            <img src="./assets/images/facilities_img005.png" alt="デジタルレントゲン" class="d-sp-none">
+            <img src="./assets/images/sp_facilities_img005.png" alt="デジタルレントゲン" class="d-pc-none">
+            <div class="item-content">
+              <h3>口腔外バキューム</h3>
+              <p>治療中に飛び散った唾液や、歯や詰め物・かぶせ物を削った際に出る粉塵を瞬時に吸い込む機械です。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <section class="sec-list__items">
       <div class="container">
@@ -444,6 +499,41 @@
   <script src="./assets/libs/wowjs/js/wow.min.js"></script>
   <script src="./assets/libs/slick_slider/js/slick.min.js"></script>
   <script src="./assets/js/main.js"></script>
+
+  <script>
+    $('.sec-facilities__slider').slick({
+      centerMode: true,
+      centerPadding: '260px',
+      slidesToShow: 3,
+      arrows: true,
+      autoplay: true,
+      responsive: [
+        {
+          breakpoint: 1601,
+          settings: {
+            centerMode: true,
+            centerPadding: '160px',
+            slidesToShow: 3
+          }
+        },
+        {
+          breakpoint: 1336,
+          settings: {
+            centerMode: true,
+            centerPadding: '100px',
+            slidesToShow: 3
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            centerMode: false,
+            slidesToShow: 1
+          }
+        },
+      ]
+    });
+  </script>
 </body>
 
 </html>

@@ -1,3 +1,8 @@
+.sec-introduction {
+  background: url('../images/clinic/clinic_bg001.png') no-repeat center center;
+  background-size: 100% 100%;
+}
+
 .item-clinic {
   .item-clinic {
     &__thumb {
@@ -22,6 +27,9 @@
 }
 
 @media ( min-width: 768px ) {
+  .sec-introduction {
+    padding: 90px 0 120px;
+  }
   .item-clinic {
     .item-clinic {
       &__thumb {
@@ -90,6 +98,9 @@
 }
 
 @media ( max-width: 767px ) {
+  .sec-introduction {
+    background: none;
+  }
   .item-clinic {
     .item-clinic {
       &__thumb {
