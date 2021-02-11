@@ -369,6 +369,11 @@
       margin-bottom: 10px;
       line-height: (30/22);
     }
+    .txt-info {
+      +.qr-wrap {
+        margin-top: 15px;
+      }
+    }
     .item-tel {
       margin: 0 auto 10px;
       max-width: 302px;
@@ -392,6 +397,26 @@
     }
     .button {
       margin-top: 10px;
+    }
+
+    .qr-wrap {
+      width: 100%;
+      &__col6 {
+        width: 50%;
+        &:first-child {
+          padding-right: 15%;
+        }
+        &:last-child {
+          padding-left: 15%;
+        }
+        &:not(:last-child) {
+          border-right: 1px dashed #fff;
+        }
+        .qr-wrap__image {
+          margin: 0 auto;
+          max-width: 80px;
+        }
+      }
     }
   }
   
@@ -640,8 +665,13 @@
     }
     .visca-clinic {
       &__item {
-        padding: 25px 10%;
         height: 100%;
+        &:not(.large) {
+          padding: 25px 10%;
+        }
+        &.large {
+          padding: 25px 5%;
+        }
         &:not(.qr-wrap) {
           display: flex;
           flex-direction: column;
@@ -681,10 +711,23 @@
     }
   }
   .visca-clinic__item {
+    .txt-info {
+      font-size: 18px;
+    }
     .tel {
       a {
         img {
           max-width: 23px;
+        }
+      }
+    }
+    .qr-wrap {
+      &__col6 {
+        &:first-child {
+          padding-right: 15%;
+        }
+        &:last-child {
+          padding-left: 15%;
         }
       }
     }
@@ -819,6 +862,26 @@
       a {
         img {
           max-width: 20px;
+        }
+      }
+    }
+    .qr-wrap {
+      &__col6 {
+        &:first-child {
+          padding-right: 5%;
+        }
+        &:last-child {
+          padding-left: 5%;
+        }
+        .button {
+          a {
+            font-size: 12px;
+            min-width: 0;
+            padding-right: 40px;
+          }
+        }
+        .qr-wrap__image {
+          max-width: 50%;
         }
       }
     }
@@ -987,12 +1050,19 @@
       border-radius: vw(20, 750);
     }
     h3 {
+      width: 100%;
       font-size: vw(30, 750);
       line-height: (42/30);
       margin-bottom: vw(25, 750);
     }
     h4 {
       margin-bottom: vw(25, 750);
+    }
+    .txt-info {
+      width: 100%;
+      +.qr-wrap {
+        margin-top: vw(25, 750);
+      }
     }
     .item-tel {
       max-width: vw(425, 750);
@@ -1013,6 +1083,22 @@
     }
     .button {
       margin-top: vw(12, 750);
+    }
+    .qr-wrap {
+      &__col6 {
+        width: 100%;
+        margin-bottom: vw(38, 750);
+        .qr-wrap__image {
+          margin: 0 auto;
+          max-width: 157px;
+        }
+        .button {
+          margin-top: vw(15, 750);
+          a {
+            max-width: 100% !important;
+          }
+        }
+      }
     }
   }
 

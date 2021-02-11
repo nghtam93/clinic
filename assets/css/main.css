@@ -1018,6 +1018,8 @@ footer .copyright {
       font-size: 22px;
       margin-bottom: 10px;
       line-height: 1.3636363636; }
+    .visca-clinic__item .txt-info + .qr-wrap {
+      margin-top: 15px; }
     .visca-clinic__item .item-tel {
       margin: 0 auto 10px;
       max-width: 302px;
@@ -1036,6 +1038,19 @@ footer .copyright {
       margin-top: 15px; }
     .visca-clinic__item .button {
       margin-top: 10px; }
+    .visca-clinic__item .qr-wrap {
+      width: 100%; }
+      .visca-clinic__item .qr-wrap__col6 {
+        width: 50%; }
+        .visca-clinic__item .qr-wrap__col6:first-child {
+          padding-right: 15%; }
+        .visca-clinic__item .qr-wrap__col6:last-child {
+          padding-left: 15%; }
+        .visca-clinic__item .qr-wrap__col6:not(:last-child) {
+          border-right: 1px dashed #fff; }
+        .visca-clinic__item .qr-wrap__col6 .qr-wrap__image {
+          margin: 0 auto;
+          max-width: 80px; }
 
   .sec-calendar .row:not(:last-child) {
     margin-bottom: 38px; }
@@ -1185,8 +1200,11 @@ footer .copyright {
       .visca-clinic h2 img {
         max-width: 277px; }
     .visca-clinic .visca-clinic__item {
-      padding: 25px 10%;
       height: 100%; }
+      .visca-clinic .visca-clinic__item:not(.large) {
+        padding: 25px 10%; }
+      .visca-clinic .visca-clinic__item.large {
+        padding: 25px 5%; }
       .visca-clinic .visca-clinic__item:not(.qr-wrap) {
         display: flex;
         flex-direction: column;
@@ -1207,8 +1225,14 @@ footer .copyright {
   .sec-worktime .tel a img {
     max-width: 23px; }
 
+  .visca-clinic__item .txt-info {
+    font-size: 18px; }
   .visca-clinic__item .tel a img {
     max-width: 23px; }
+  .visca-clinic__item .qr-wrap__col6:first-child {
+    padding-right: 15%; }
+  .visca-clinic__item .qr-wrap__col6:last-child {
+    padding-left: 15%; }
 
   .sec-medical {
     padding: 120px 0 180px; }
@@ -1280,6 +1304,16 @@ footer .copyright {
 
   .visca-clinic__item .tel a img {
     max-width: 20px; }
+  .visca-clinic__item .qr-wrap__col6:first-child {
+    padding-right: 5%; }
+  .visca-clinic__item .qr-wrap__col6:last-child {
+    padding-left: 5%; }
+  .visca-clinic__item .qr-wrap__col6 .button a {
+    font-size: 12px;
+    min-width: 0;
+    padding-right: 40px; }
+  .visca-clinic__item .qr-wrap__col6 .qr-wrap__image {
+    max-width: 50%; }
 
   .sec-calendar {
     font-size: 12px; }
@@ -1390,11 +1424,16 @@ footer .copyright {
       bottom: 0.9333333333vw;
       border-radius: 2.6666666667vw; }
     .visca-clinic__item h3 {
+      width: 100%;
       font-size: 4vw;
       line-height: 1.4;
       margin-bottom: 3.3333333333vw; }
     .visca-clinic__item h4 {
       margin-bottom: 3.3333333333vw; }
+    .visca-clinic__item .txt-info {
+      width: 100%; }
+      .visca-clinic__item .txt-info + .qr-wrap {
+        margin-top: 3.3333333333vw; }
     .visca-clinic__item .item-tel {
       max-width: 56.6666666667vw;
       margin: 0 auto 1.6vw;
@@ -1410,6 +1449,16 @@ footer .copyright {
             margin-right: 2vw; }
     .visca-clinic__item .button {
       margin-top: 1.6vw; }
+    .visca-clinic__item .qr-wrap__col6 {
+      width: 100%;
+      margin-bottom: 5.0666666667vw; }
+      .visca-clinic__item .qr-wrap__col6 .qr-wrap__image {
+        margin: 0 auto;
+        max-width: 157px; }
+      .visca-clinic__item .qr-wrap__col6 .button {
+        margin-top: 2vw; }
+        .visca-clinic__item .qr-wrap__col6 .button a {
+          max-width: 100% !important; }
 
   .sec-calendar .row:not(:last-child):not(.social) {
     margin-bottom: 17.3333333333vw; }
