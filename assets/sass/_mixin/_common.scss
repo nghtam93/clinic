@@ -533,7 +533,7 @@ $pages: 'access', 'clinic', 'information', 'information-detail', 'service', 'sta
 @media ( max-width: 767px ) and (min-width: 576px) {
   .container {
     max-width: 100%;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: vw(30, 750);
+    padding-right: vw(30, 750);
   }
 }

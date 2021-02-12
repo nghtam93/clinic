@@ -255,8 +255,18 @@ header {
         align-items: center;
         justify-content: space-between;
         margin-bottom: 40px;
-        .top-bar, .footer-bar {
+        .top-bar {
           display: none;
+        }
+        .footer-bar {
+          p {
+            &:not(.button) {
+              display: none;
+            }
+          }
+          ul {
+            display: none !important;
+          }
         }
         nav {
           &.navbar {
