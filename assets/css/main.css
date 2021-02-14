@@ -31,7 +31,6 @@ footer, header, hgroup, menu, nav, section {
 body {
   line-height: 1;
   font-family: 'Noto Sans JP', sans-serif;
-  background: url(../images/bg_body.jpg) no-repeat center top/cover, url(../images/bg_repeat.png) repeat left top;
   color: #454443;
   font-style: normal;
   font-weight: normal; }
@@ -60,6 +59,7 @@ a {
 
 @media (min-width: 768px) {
   body {
+    background: url("../images/bg_body.png") no-repeat center top/100%, url("../images/bg_repeat.png") repeat left top;
     font-size: 16px;
     line-height: 1.8; } }
 @media (max-width: 991px) and (min-width: 768px) {
@@ -67,6 +67,7 @@ a {
     font-size: 14px; } }
 @media (max-width: 767px) {
   body {
+    background: url("../images/bg_repeat.png") repeat left top;
     font-size: 2.9333333333vw;
     line-height: 1.6363636364; } }
 h1 {
@@ -732,61 +733,69 @@ header nav.navbar {
       max-width: 1430px; } }
   header nav.navbar ul.navbar-nav {
     width: 100%; }
-    header nav.navbar ul.navbar-nav li a {
-      font-family: 'Noto Sans JP', sans-serif;
-      font-weight: bold;
-      font-size: 16px;
-      line-height: 19px;
-      letter-spacing: 1px;
-      padding: 15px 0 !important;
+    header nav.navbar ul.navbar-nav li {
       position: relative;
-      color: #454443;
-      text-decoration: none;
       transition: 0.3s; }
-      header nav.navbar ul.navbar-nav li a:before {
-        content: '';
-        position: absolute;
-        width: 5px;
-        height: 5px;
-        background: #be724a;
-        border-radius: 50%;
-        top: 50%;
-        left: -3px;
-        transform: translateY(-50%);
-        -webkit-transition: .3s;
-        -moz-transition: .3s;
-        -ms-transition: .3s;
-        -o-transition: .3s;
-        transition: .3s; }
-      header nav.navbar ul.navbar-nav li a:hover {
+      header nav.navbar ul.navbar-nav li a {
+        font-family: 'Noto Sans JP', sans-serif;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 1px;
+        padding: 15px 0 !important;
+        position: relative;
+        color: #454443;
+        text-decoration: none;
+        transition: 0.3s; }
+        header nav.navbar ul.navbar-nav li a:before {
+          content: '';
+          position: absolute;
+          width: 5px;
+          height: 5px;
+          background: #be724a;
+          border-radius: 50%;
+          top: 50%;
+          left: -2px;
+          transform: translateY(-50%);
+          -webkit-transition: .3s;
+          -moz-transition: .3s;
+          -ms-transition: .3s;
+          -o-transition: .3s;
+          transition: .3s;
+          z-index: 2; }
+        header nav.navbar ul.navbar-nav li a:hover {
+          color: #be724a; }
+          header nav.navbar ul.navbar-nav li a:hover:before {
+            width: 8px;
+            height: 8px;
+            left: -4.5px;
+            transform: translateY(-50%); }
+      header nav.navbar ul.navbar-nav li.active a, header nav.navbar ul.navbar-nav li:hover a {
         color: #be724a; }
-        header nav.navbar ul.navbar-nav li a:hover:before {
+        header nav.navbar ul.navbar-nav li.active a:before, header nav.navbar ul.navbar-nav li:hover a:before {
           width: 8px;
           height: 8px;
           left: -4.5px;
           transform: translateY(-50%); }
-    header nav.navbar ul.navbar-nav li.active a {
-      color: #be724a; }
-      header nav.navbar ul.navbar-nav li.active a:before {
-        width: 8px;
-        height: 8px;
-        left: -4.5px;
-        transform: translateY(-50%); }
 header nav .navbar-brand {
   padding: 25px 0;
   transition: 0.3s; }
 header .main-banner .slick-slide {
+  overflow: hidden;
   position: relative;
-  padding-bottom: 45px; }
+  padding-bottom: 0.4%; }
   header .main-banner .slick-slide img {
     width: 100%; }
   header .main-banner .slick-slide div.main-copy {
     position: absolute;
     bottom: 0;
-    left: 0;
+    left: 7.5%;
     max-width: 30%; }
   header .main-banner .slick-slide:focus {
     outline: none; }
+  header .main-banner .slick-slide.slick-active > img {
+    -webkit-animation: transMain 8s ease-in-out;
+    animation: transMain 8s ease-in-out; }
   header .main-banner .slick-slide.slick-active div.main-copy {
     -webkit-animation: fadeMain 1s ease-in-out;
     animation: fadeMain 1s ease-in-out; }
@@ -830,9 +839,19 @@ header.sticky-header {
         header nav.navbar-expand-md .navbar-collapse .navbar-nav {
           display: block; }
           header nav.navbar-expand-md .navbar-collapse .navbar-nav li a {
-            border-left: 1px solid #cec8ba;
             padding: 19px 20px !important;
-            display: block; }
+            display: block;
+            transition: 1s; }
+            header nav.navbar-expand-md .navbar-collapse .navbar-nav li a:after {
+              content: '';
+              position: absolute;
+              width: 1px;
+              border-left: 1px solid #cec8ba;
+              top: 0;
+              left: 0; }
+            header nav.navbar-expand-md .navbar-collapse .navbar-nav li a.ani-on:after {
+              -webkit-animation: lineMenu 1s forwards;
+              animation: lineMenu 1s forwards; }
     header .main-banner {
       width: 80.3%; }
     header .main-title {
@@ -981,6 +1000,8 @@ header.sticky-header {
         header nav.navbar ul.navbar-nav li {
           margin: 0;
           padding: 0 30px; }
+          header nav.navbar ul.navbar-nav li:before {
+            content: none; }
           header nav.navbar ul.navbar-nav li a {
             display: block;
             font-size: 30px;
@@ -988,8 +1009,6 @@ header.sticky-header {
             text-align: center;
             line-height: 1;
             border-bottom: 1px solid #d2cdc4; }
-            header nav.navbar ul.navbar-nav li a:before {
-              content: none; }
             header nav.navbar ul.navbar-nav li a:hover {
               color: #5f4731; }
           header nav.navbar ul.navbar-nav li.active a {
@@ -1047,9 +1066,9 @@ header.sticky-header {
     header .main-banner {
       padding-top: 166px; }
       header .main-banner .slick-slide {
-        padding-bottom: 1.8%; }
-        header .main-banner .slick-slide div.main-copy {
-          left: 3%; }
+        padding-bottom: 0.6%; }
+      header .main-banner .slick-dots {
+        transform: translateY(50%); }
     header .company-info {
       display: block;
       text-align: center; }
@@ -1206,15 +1225,18 @@ header.sticky-header {
   header .main-title {
     margin-top: 12vw; }
 
-  body.home header nav.navbar {
-    height: 22.1333333333vw; }
-    body.home header nav.navbar .navbar-toggler {
-      left: 4vw;
-      top: 12.6666666667vw; }
-    body.home header nav.navbar.active {
-      height: 100vh; }
-      body.home header nav.navbar.active .navbar-toggler {
-        top: 4vw; } }
+  body.home header {
+    background: url("../images/sp_bg_body.png") no-repeat right center;
+    background-size: 46.8vw; }
+    body.home header nav.navbar {
+      height: 22.1333333333vw; }
+      body.home header nav.navbar .navbar-toggler {
+        left: 4vw;
+        top: 12.6666666667vw; }
+      body.home header nav.navbar.active {
+        height: 100vh; }
+        body.home header nav.navbar.active .navbar-toggler {
+          top: 4vw; } }
 @keyframes fadeMain {
   0% {
     opacity: 0;
@@ -1222,6 +1244,16 @@ header.sticky-header {
   100% {
     opacity: 1;
     transform: translateY(0); } }
+@keyframes transMain {
+  0% {
+    transform: translateX(30px); }
+  100% {
+    transform: translateX(-30px); } }
+@keyframes lineMenu {
+  0% {
+    height: 0; }
+  100% {
+    height: 100%; } }
 footer .ftnav-list {
   border-bottom: 1px solid rgba(232, 221, 216, 0.2); }
   footer .ftnav-list li a {
@@ -1257,7 +1289,7 @@ footer .copyright {
 @media (max-width: 767px) {
   footer {
     background: url("../images/sp_footer_bg.png") no-repeat center top;
-    background-size: auto 100%;
+    background-size: 1005 100%;
     padding: 5.3333333333vw 0 4vw;
     margin-top: -6.6666666667vw;
     letter-spacing: 0.1333333333vw; }
@@ -1391,24 +1423,21 @@ footer .copyright {
 
 .sec-emphasis {
   position: relative;
-  background: url("../images/emphasis_bg01.png") no-repeat center center/cover;
   display: flex;
   align-items: center;
   overflow: visible;
   z-index: 2; }
 
-.sec-greeting {
-  background: url("../images/greeting_bg01.png") no-repeat bottom center/cover; }
-  .sec-greeting .avatar img {
-    max-width: 90%; }
-  .sec-greeting .user-content {
-    margin: 0 auto; }
-    .sec-greeting .user-content .info-item__title {
-      font-weight: bold;
-      border-bottom: 1px solid #454443; }
-  .sec-greeting .button a {
-    display: flex;
-    margin: 0 auto; }
+.sec-greeting .avatar img {
+  max-width: 90%; }
+.sec-greeting .user-content {
+  margin: 0 auto; }
+  .sec-greeting .user-content .info-item__title {
+    font-weight: bold;
+    border-bottom: 1px solid #454443; }
+.sec-greeting .button a {
+  display: flex;
+  margin: 0 auto; }
 
 .sec-feature h3 .numb {
   display: block;
@@ -1418,14 +1447,12 @@ footer .copyright {
 .sec-feature .button a {
   display: flex; }
 
-.sec-medical {
-  background: url("../images/medical_bg001.png") no-repeat center center; }
-  .sec-medical .medical-list__item {
-    font-weight: bold;
-    color: #5f4731; }
-    .sec-medical .medical-list__item .item-image {
-      border-radius: 50%;
-      background-color: #f4eae1; }
+.sec-medical .medical-list__item {
+  font-weight: bold;
+  color: #5f4731; }
+  .sec-medical .medical-list__item .item-image {
+    border-radius: 50%;
+    background-color: #f4eae1; }
 
 .sec-facilities .slick-track {
   display: flex; }
@@ -1465,8 +1492,6 @@ footer .copyright {
     color: #454443; }
 
 .sec-service {
-  background: url("../images/medical_bg001.png") no-repeat center center;
-  background-size: 100% 100%;
   letter-spacing: 1.5px; }
   .sec-service h4 {
     color: #c57638;
@@ -1487,12 +1512,10 @@ footer .copyright {
   justify-content: center;
   background-color: #f2efe7; }
 
-.visca-clinic {
-  background: url("../images/visca-clinic_bg001.png") no-repeat center center; }
-  .visca-clinic .qr-wrap img {
-    width: 100%; }
-  .visca-clinic .qr-wrap .button a {
-    display: flex; }
+.visca-clinic .qr-wrap img {
+  width: 100%; }
+.visca-clinic .qr-wrap .button a {
+  display: flex; }
 
 @media (min-width: 768px) {
   .sec-news .sec-news-scroll .mCSB_container {
@@ -1589,11 +1612,13 @@ footer .copyright {
     transform: translateY(-50%); }
 
   .sec-emphasis {
+    background: url("../images/emphasis_bg01.png") no-repeat center center/cover;
     padding: 50px 0; }
     .sec-emphasis h2 {
       margin-bottom: 50px; }
 
   .sec-greeting {
+    background: url("../images/greeting_bg01.png") no-repeat bottom center/cover;
     padding: 200px 0 145px;
     margin-top: -130px;
     letter-spacing: 1.5px; }
@@ -1628,24 +1653,30 @@ footer .copyright {
     .sec-greeting .button a {
       max-width: 285px; }
 
-  .sec-feature .row:not(:last-child) {
-    margin-bottom: 55px; }
-  .sec-feature h2 {
-    margin-bottom: 65px; }
-  .sec-feature h3 {
-    line-height: 1.4;
-    margin-bottom: 25px; }
-    .sec-feature h3 .numb {
-      font-size: 40px; }
-  .sec-feature .feature-content {
-    max-width: 500px; }
-  .sec-feature .button {
-    margin-top: 25px; }
-    .sec-feature .button a {
-      max-width: 285px; }
+  .sec-feature {
+    background: url("../images/sec-feature_bg001.png") no-repeat left bottom -8%/37%;
+    margin-bottom: 0 !important;
+    padding-bottom: 6%; }
+    .sec-feature .row:not(:last-child) {
+      margin-bottom: 55px; }
+    .sec-feature h2 {
+      margin-bottom: 65px; }
+    .sec-feature h3 {
+      line-height: 1.4;
+      margin-bottom: 25px; }
+      .sec-feature h3 .numb {
+        font-size: 40px; }
+    .sec-feature .feature-content {
+      max-width: 500px; }
+    .sec-feature .button {
+      margin-top: 25px; }
+      .sec-feature .button a {
+        max-width: 285px; }
 
   .sec-medical {
-    background-size: 100% 100%; }
+    background: url("../images/medical_bg001.png") no-repeat center center;
+    background-size: 100% 100%;
+    margin-bottom: 0 !important; }
     .sec-medical h2 {
       margin-bottom: 70px; }
     .sec-medical .medical-list__item {
@@ -1653,10 +1684,12 @@ footer .copyright {
       .sec-medical .medical-list__item .item-image {
         margin: 0 auto 10px; }
 
-  .sec-facilities h2 {
-    margin-bottom: 85px; }
-  .sec-facilities .slider-item {
-    padding-top: 30px; }
+  .sec-facilities {
+    padding: 6% 0;
+    background: url("../images/sec-facilities_bg01.png") no-repeat right center/contain;
+    margin-bottom: 0 !important; }
+    .sec-facilities h2 {
+      margin-bottom: 85px; }
     .sec-facilities .slider-item__content {
       max-width: 320px;
       padding: 0 20px;
@@ -1668,25 +1701,25 @@ footer .copyright {
         line-height: 1.3; }
     .sec-facilities .slider-item.slick-center .item-content {
       margin-top: 35px; }
-  .sec-facilities .button {
-    margin-top: 35px; }
-    .sec-facilities .button a {
-      display: flex;
-      max-width: 285px;
-      margin: 0 auto; }
-  .sec-facilities .slick-arrow {
-    top: 35%;
-    width: 48px;
-    height: 48px;
-    z-index: 9; }
-    .sec-facilities .slick-arrow:before {
-      display: none; }
-    .sec-facilities .slick-arrow.slick-prev {
-      background: url("../images/slider_arrow_left.png") no-repeat center center/cover;
-      left: 36.5%; }
-    .sec-facilities .slick-arrow.slick-next {
-      background: url("../images/slider_arrow_right.png") no-repeat center center/cover;
-      right: 36.5%; }
+    .sec-facilities .button {
+      margin-top: 35px; }
+      .sec-facilities .button a {
+        display: flex;
+        max-width: 285px;
+        margin: 0 auto; }
+    .sec-facilities .slick-arrow {
+      top: 35%;
+      width: 48px;
+      height: 48px;
+      z-index: 9; }
+      .sec-facilities .slick-arrow:before {
+        display: none; }
+      .sec-facilities .slick-arrow.slick-prev {
+        background: url("../images/slider_arrow_left.png") no-repeat center center/cover;
+        left: 36.5%; }
+      .sec-facilities .slick-arrow.slick-next {
+        background: url("../images/slider_arrow_right.png") no-repeat center center/cover;
+        right: 36.5%; }
 
   .sec-map .row:not(:last-child) {
     margin-bottom: 40px; }
@@ -1715,15 +1748,18 @@ footer .copyright {
       .sec-map .map-info dl dd:nth-child(2) {
         padding-top: 0; }
 
-  .sec-service .service-image {
-    margin-bottom: 20px; }
-  .sec-service .service-content {
-    max-width: 354px;
-    margin: 0 auto; }
-  .sec-service h4 {
-    padding: 16px 20px;
-    border-radius: 31px;
-    margin-bottom: 20px; }
+  .sec-service {
+    background: url("../images/medical_bg001.png") no-repeat center center;
+    background-size: 100% 100%; }
+    .sec-service .service-image {
+      margin-bottom: 20px; }
+    .sec-service .service-content {
+      max-width: 354px;
+      margin: 0 auto; }
+    .sec-service h4 {
+      padding: 16px 20px;
+      border-radius: 31px;
+      margin-bottom: 20px; }
 
   .sec-cooperate .row:not(:last-child) {
     margin-bottom: 45px; }
@@ -1748,6 +1784,7 @@ footer .copyright {
     border-radius: 30px; }
 
   .visca-clinic {
+    background: url("../images/visca-clinic_bg001.png") no-repeat center center;
     background-size: 100% 100%; }
     .visca-clinic h2 {
       margin-bottom: 60px; }
@@ -1876,6 +1913,9 @@ footer .copyright {
   .sec-emphasis {
     min-height: 500px; } }
 @media (max-width: 1023px) and (min-width: 768px) {
+  .sec-feature {
+    background-size: 50%; }
+
   .sec-facilities .slider-item {
     margin: 0 15px;
     font-size: 13px; }
@@ -2092,6 +2132,7 @@ footer .copyright {
       height: 4.2666666667vw; }
 
   .sec-emphasis {
+    background: url("../images/sp_emphasis_bg01.png") no-repeat center center/cover;
     min-height: 97.3333333333vw;
     padding: 13.3333333333vw 0;
     font-weight: bold;
@@ -2099,9 +2140,10 @@ footer .copyright {
     letter-spacing: 0.2533333333vw; }
 
   .sec-greeting {
-    background-size: auto 100%;
+    background: url("../images/sp_greeting_bg01.png") no-repeat center center;
+    background-size: 100% 100%;
     padding: 46.6666666667vw 0 20vw;
-    margin-top: -20vw;
+    margin-top: -13.3333333333vw;
     letter-spacing: 0.2666666667vw; }
     .sec-greeting [class*="col-"] + [class*="col-"] {
       margin-top: 6.6666666667vw; }
@@ -2144,8 +2186,9 @@ footer .copyright {
       margin-top: 4vw; }
 
   .sec-medical {
-    padding: 10vw 0 22.6666666667vw;
-    background-size: auto 100%; }
+    background: url("../images/sp_medical_bg001.png") no-repeat center center;
+    background-size: 100% 100%;
+    padding: 10vw 0 22.6666666667vw; }
     .sec-medical h2 {
       margin-bottom: 8vw; }
     .sec-medical .medical-list__item {
@@ -2221,7 +2264,8 @@ footer .copyright {
         padding: 3.3333333333vw 0; }
 
   .sec-service {
-    background-size: auto 100%;
+    background: url("../images/sp_service_bg001.png") no-repeat center center;
+    background-size: 100% 100%;
     padding: 22.6666666667vw 0; }
     .sec-service [class*="col-"]:not(:last-child) {
       margin-bottom: 8vw; }
@@ -2263,8 +2307,9 @@ footer .copyright {
     border-radius: 4vw; }
 
   .visca-clinic {
+    background: url("../images/sp_visca-clinic_bg001.png") no-repeat center center;
     padding: 26.6666666667vw 0;
-    background-size: auto 100%; }
+    background-size: 100% 100%; }
     .visca-clinic [class*="col-"]:not(:last-child) {
       margin-bottom: 4vw; }
     .visca-clinic h2 {

@@ -25,7 +25,6 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
   font-family: 'Noto Sans JP', sans-serif;
-  background: url(../images/bg_body.jpg) no-repeat center top / cover,url(../images/bg_repeat.png) repeat left top;
   color: #454443;
   font-style: normal;
   font-weight: normal;
@@ -56,6 +55,7 @@ a {
 
 @media ( min-width: 768px ) {
   body {
+    background: url('../images/bg_body.png') no-repeat center top / 100%, url('../images/bg_repeat.png') repeat left top;
     font-size: 16px;
     line-height: 1.8;
   }
@@ -69,6 +69,7 @@ a {
 
 @media ( max-width: 767px ) {
   body {
+    background: url('../images/bg_repeat.png') repeat left top;
     font-size: vw(22, 750);
     line-height: (36/22);
   }

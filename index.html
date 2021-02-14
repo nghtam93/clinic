@@ -31,7 +31,7 @@
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto justify-content-center">
           <li class="nav-item active">
-            <a href="#">トップ</a>
+            <a href="#" class="ani-on">トップ</a>
           </li>
           <li class="nav-item">
             <a href="#">診療案内</a>
@@ -63,23 +63,23 @@
       </div>
     </nav>
     <div class="main-banner">
-      <div>
-        <img src="./assets/images/banner01.png" alt="これからも地域の信頼とともに" class="d-sp-none" />
-        <img src="./assets/images/sp_banner01.png" alt="これからも地域の信頼とともに" class="d-pc-none" />
+      <div class="slide">
+        <img src="./assets/images/banner01.png" alt="これからも地域の信頼とともに" class="d-sp-none load lazyload" />
+        <img src="./assets/images/sp_banner01.png" alt="これからも地域の信頼とともに" class="d-pc-none load lazyload" />
+        <div class="main-copy">
+          <img src="./assets/images/main-copy01.png" alt="これからも地域の信頼とともに" class="d-sp-none load lazyload" />
+          <img src="./assets/images/sp_main-copy01.png" alt="これからも地域の信頼とともに" class="d-pc-none load lazyload" />
+        </div>
+      </div>
+      <div class="slide">
+        <img src="./assets/images/banner01.png" alt="これからも地域の信頼とともに" class="d-sp-none load lazyload" />
+        <img src="./assets/images/sp_banner01.png" alt="これからも地域の信頼とともに" class="d-pc-none load lazyload" />
         <div class="main-copy">
           <img src="./assets/images/main-copy01.png" alt="これからも地域の信頼とともに" class="d-sp-none" />
           <img src="./assets/images/sp_main-copy01.png" alt="これからも地域の信頼とともに" class="d-pc-none" />
         </div>
       </div>
-      <div>
-        <img src="./assets/images/banner01.png" alt="これからも地域の信頼とともに" class="d-sp-none" />
-        <img src="./assets/images/sp_banner01.png" alt="これからも地域の信頼とともに" class="d-pc-none" />
-        <div class="main-copy">
-          <img src="./assets/images/main-copy01.png" alt="これからも地域の信頼とともに" class="d-sp-none" />
-          <img src="./assets/images/sp_main-copy01.png" alt="これからも地域の信頼とともに" class="d-pc-none" />
-        </div>
-      </div>
-      <div>
+      <div class="slide">
         <img src="./assets/images/banner01.png" alt="これからも地域の信頼とともに" class="d-sp-none" />
         <img src="./assets/images/sp_banner01.png" alt="これからも地域の信頼とともに" class="d-pc-none" />
         <div class="main-copy">
@@ -512,6 +512,16 @@
             </div>
           </div>
         </div>
+        <div class="slider-item">
+          <div class="slider-item__content">
+            <img src="./assets/images/facilities_img003.png" alt="デジタルレントゲン" class="d-sp-none">
+            <img src="./assets/images/sp_facilities_img003.png" alt="デジタルレントゲン" class="d-pc-none">
+            <div class="item-content">
+              <h3>デジタルレントゲン</h3>
+              <p>従来のレントゲンと比べて被ばく量が1/10ほどに抑えられるため、身体への負担が少なく済むことが特徴です。</p>
+            </div>
+          </div>
+        </div>
       </div>
       <p class="button wow fadeInUp"><a href="#" class="arrow">詳しくはこちら</a></p>
     </section>
@@ -798,13 +808,15 @@
   <script src="./assets/libs/slick_slider/js/slick.min.js"></script>
   <script src="./assets/js/main.js"></script>
 
-  <script>
+  <!-- <script>
     $('.sec-facilities__slider').slick({
       centerMode: true,
       centerPadding: '260px',
       slidesToShow: 3,
       arrows: true,
       autoplay: true,
+      autoplaySpeed: 2000,
+      easing: "linear",
       responsive: [
         {
           breakpoint: 1601,
@@ -831,7 +843,7 @@
         },
       ]
     });
-  </script>
+  </script> -->
 </body>
 
 </html>

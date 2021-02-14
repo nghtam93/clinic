@@ -159,7 +159,6 @@
 
 .sec-emphasis {
   position: relative;
-  background: url('../images/emphasis_bg01.png') no-repeat center center / cover;
   display: flex;
   align-items: center;
   overflow: visible;
@@ -167,7 +166,6 @@
 }
 
 .sec-greeting {
-  background: url('../images/greeting_bg01.png') no-repeat bottom center / cover;
   .avatar {
     img {
       max-width: 90%;
@@ -208,7 +206,6 @@
 }
 
 .sec-medical {
-  background: url('../images/medical_bg001.png') no-repeat center center;
   .medical-list {
     &__item {
       font-weight: bold;
@@ -288,8 +285,6 @@
 }
 
 .sec-service {
-  background: url('../images/medical_bg001.png') no-repeat center center;
-  background-size: 100% 100%;
   letter-spacing: 1.5px;
   h4 {
     color: #c57638;
@@ -320,7 +315,6 @@
 }
 
 .visca-clinic {
-  background: url('../images/visca-clinic_bg001.png') no-repeat center center;
   .qr-wrap {
     img {
       width: 100%;
@@ -480,6 +474,7 @@
   }
 
   .sec-emphasis {
+    background: url('../images/emphasis_bg01.png') no-repeat center center / cover;
     padding: 50px 0;
     h2 {
       margin-bottom: 50px;
@@ -487,6 +482,7 @@
   }
 
   .sec-greeting {
+    background: url('../images/greeting_bg01.png') no-repeat bottom center / cover;
     padding: 200px 0 145px;
     margin-top: -130px;
     letter-spacing: 1.5px;
@@ -540,6 +536,9 @@
   }
 
   .sec-feature {
+    background: url('../images/sec-feature_bg001.png') no-repeat left bottom -8% / 37%;
+    margin-bottom: 0 !important;
+    padding-bottom: 6%;
     .row {
       &:not(:last-child) {
         margin-bottom: 55px;
@@ -567,7 +566,9 @@
   }
 
   .sec-medical {
+    background: url('../images/medical_bg001.png') no-repeat center center;
     background-size: 100% 100%;
+    margin-bottom: 0 !important;
     h2 {
       margin-bottom: 70px;
     }
@@ -582,11 +583,13 @@
   }
 
   .sec-facilities {
+    padding: 6% 0;
+    background: url('../images/sec-facilities_bg01.png') no-repeat right center / contain;
+    margin-bottom: 0 !important;
     h2 {
       margin-bottom: 85px;
     }
     .slider-item {
-      padding-top: 30px;
       &__content {
         max-width: 320px;
         padding: 0 20px;
@@ -677,6 +680,8 @@
     }
   }
   .sec-service {
+    background: url('../images/medical_bg001.png') no-repeat center center;
+    background-size: 100% 100%;
     .service-image {
       margin-bottom: 20px;
     }
@@ -732,6 +737,7 @@
   }
 
   .visca-clinic {
+    background: url('../images/visca-clinic_bg001.png') no-repeat center center;
     background-size: 100% 100%;
     h2 {
       margin-bottom: 60px;
@@ -972,6 +978,9 @@
 }
 
 @media ( max-width: 1023px ) and ( min-width: 768px ) {
+  .sec-feature {
+    background-size: 50%;
+  }
   .sec-facilities {
     .slider-item {
       margin: 0 15px;
@@ -1317,6 +1326,7 @@
   }
 
   .sec-emphasis {
+    background: url('../images/sp_emphasis_bg01.png') no-repeat center center / cover;
     min-height: vw(730, 750);
     padding: vw(100, 750) 0;
     font-weight: bold;
@@ -1325,9 +1335,10 @@
   }
 
   .sec-greeting {
-    background-size: auto 100%;
+    background: url('../images/sp_greeting_bg01.png') no-repeat center center;
+    background-size: 100% 100%;
     padding: vw(350, 750) 0 vw(150, 750);
-    margin-top: - vw(150, 750);
+    margin-top: - vw(100, 750);
     letter-spacing: vw(2, 750);
     [class*="col-"] {
       +[class*="col-"] {
@@ -1396,8 +1407,9 @@
   }
   
   .sec-medical {
+    background: url('../images/sp_medical_bg001.png') no-repeat center center;
+    background-size: 100% 100%;
     padding: vw(75, 750) 0 vw(170, 750);
-    background-size: auto 100%;
     h2 {
       margin-bottom: vw(60, 750);
     }
@@ -1506,7 +1518,8 @@
   }
 
   .sec-service {
-    background-size: auto 100%;
+    background: url('../images/sp_service_bg001.png') no-repeat center center;
+    background-size: 100% 100%;
     padding: vw(170, 750) 0;
     [class*="col-"] {
       &:not(:last-child) {
@@ -1580,8 +1593,9 @@
   }
 
   .visca-clinic {
+    background: url('../images/sp_visca-clinic_bg001.png') no-repeat center center;
     padding: vw(200, 750) 0;
-    background-size: auto 100%;
+    background-size: 100% 100%;
     [class*="col-"] {
       &:not(:last-child) {
         margin-bottom: vw(30, 750);

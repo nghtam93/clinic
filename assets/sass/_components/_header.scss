@@ -68,6 +68,8 @@ header {
         &.navbar-nav {
           width: 100%;
           li {
+            position: relative;
+            transition: 0.3s;
             a {
               font-family: 'Noto Sans JP', sans-serif;
               font-weight: bold;
@@ -87,13 +89,14 @@ header {
                 background: #be724a;
                 border-radius: 50%;
                 top: 50%;
-                left: -3px;
+                left: -2px;
                 transform: translateY(-50%);
                 -webkit-transition: .3s;
                 -moz-transition: .3s;
                 -ms-transition: .3s;
                 -o-transition: .3s;
                 transition: .3s;
+                z-index: 2;
               }
               &:hover {
                 color: #be724a;
@@ -105,7 +108,7 @@ header {
                 }
               }
             }
-            &.active {
+            &.active, &:hover {
               a {
                 color: #be724a;
                 &:before {
@@ -127,8 +130,9 @@ header {
   }
   .main-banner {
     .slick-slide {
+      overflow: hidden;
       position: relative;
-      padding-bottom: 45px;
+      padding-bottom: 0.4%;
       img {
         width: 100%;
       }
@@ -136,7 +140,7 @@ header {
         &.main-copy {
           position: absolute;
           bottom: 0;
-          left: 0;
+          left: 7.5%;
           max-width: 30%;
         }
       }
@@ -144,6 +148,10 @@ header {
         outline: none;
       }
       &.slick-active {
+        >img {
+          -webkit-animation: transMain 8s ease-in-out;
+          animation: transMain 8s ease-in-out;
+        }
         div {
           &.main-copy {
             -webkit-animation: fadeMain 1s ease-in-out;
@@ -217,9 +225,23 @@ header {
             display: block;
             li {
               a {
-                border-left: 1px solid #cec8ba;
                 padding: 19px 20px !important;
                 display: block;
+                transition: 1s;
+                &:after {
+                  content: '';
+                  position: absolute;
+                  width: 1px;
+                  border-left: 1px solid #cec8ba;
+                  top: 0;
+                  left: 0;
+                }
+                &.ani-on {
+                  &:after {
+                    -webkit-animation: lineMenu 1s forwards;
+                    animation: lineMenu 1s forwards;
+                  }
+                }
               }
             }
           }
@@ -462,6 +484,9 @@ header {
             li {
               margin: 0;
               padding: 0 30px;
+              &:before {
+                content: none;
+              }
               a {
                 display: block;
                 font-size: 30px;
@@ -469,9 +494,6 @@ header {
                 text-align: center;
                 line-height: 1;
                 border-bottom: 1px solid #d2cdc4;
-                &:before {
-                  content: none;
-                }
                 &:hover {
                   color: #5f4731;
                 }
@@ -556,12 +578,10 @@ header {
     .main-banner {
       padding-top: 166px;
       .slick-slide {
-        padding-bottom: 1.8%;
-        div {
-          &.main-copy {
-            left: 3%;
-          }
-        }
+        padding-bottom: 0.6%;
+      }
+      .slick-dots {
+        transform: translateY(50%);
       }
     }
 
@@ -829,6 +849,8 @@ header {
 
   body.home {
     header {
+      background: url('../images/sp_bg_body.png') no-repeat right center;
+      background-size: vw(351, 750);
       nav.navbar {
         height: vw(166, 750);
         .navbar-toggler {
@@ -849,4 +871,14 @@ header {
 @keyframes fadeMain {
   0% {opacity: 0;transform: translateY(20px);}
   100% {opacity: 1;transform: translateY(0);}
+}
+
+@keyframes transMain {
+  0% {transform: translateX(30px);}
+  100% {transform: translateX(-30px);}
+}
+
+@keyframes lineMenu {
+  0% {height: 0;}
+  100% {height: 100%;}
 }
