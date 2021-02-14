@@ -17,8 +17,8 @@ header {
     padding-bottom: 10px;
   }
   .footer-bar {
-    margin-top: 20px;
-    line-height: 2;
+    margin-top: 24px;
+    line-height: 1.9;
     p {
       strong {
         a {
@@ -27,10 +27,10 @@ header {
       }
     }
     .button {
-      margin-bottom: 20px;
+      margin-bottom: 18px;
     }
     ul {
-      margin-top: 25px;
+      margin-top: 19px;
       li {
         &+li {
           margin-left: 12px;
@@ -46,7 +46,7 @@ header {
   nav {
     &.navbar {
       margin: 0 auto;
-      padding: 42px 0;
+      padding: 5px 0 42px;
       -webkit-transition: .3s;
       -moz-transition: .3s;
       -ms-transition: .3s;
@@ -124,15 +124,20 @@ header {
       }
     }
     .navbar-brand {
-      padding: 25px 0;
+      padding: 21px 0;
+      margin-bottom: 7px;
       transition: 0.3s;
     }
   }
   .main-banner {
+    @media ( min-width: 1024px ) {
+      padding-top: 8px;
+      margin-bottom: 109px !important;
+    }
     .slick-slide {
       overflow: hidden;
       position: relative;
-      padding-bottom: 0.4%;
+      padding-bottom: 0.6%;
       img {
         width: 100%;
       }
@@ -214,9 +219,9 @@ header {
 @media (min-width: 1024px) {
   header {
     display: flex;
-    padding: 15px 6%;
+    padding: 18px 7%;
     nav {
-      width: 19.7%;
+      width: 20.7%;
       &.navbar-expand-md {
         display: block;
         margin: 0;
@@ -247,9 +252,14 @@ header {
           }
         }
       }
+      .navbar-brand {
+        img {
+          max-width: 277px;
+        }
+      }
     }
     .main-banner {
-      width: 80.3%;
+      width: 79.3%;
     }
     .main-title {
       width: 75.8%;

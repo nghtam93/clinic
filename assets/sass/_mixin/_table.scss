@@ -39,7 +39,8 @@ table {
 @media ( min-width: 768px ) {
   .table-schedule {
     th, td {
-      padding: 13px 15px;
+      padding: 11px 22px;
+      letter-spacing: 1.8px;
     }
     thead {
       th {
@@ -75,6 +76,15 @@ table {
 @media ( min-width: 1200px ) {
   .table-schedule {
     font-size: 22px;
+  }
+}
+
+@media ( max-width: 1200px ) and ( min-width: 768px ) {
+  .table-schedule {
+    th, td {
+      padding: 11px 12px;
+      letter-spacing: 0;
+    }
   }
 }
 

@@ -28,15 +28,16 @@ footer {
   footer {
     background: url('../images/footer_bg.png') no-repeat center top;
     background-size: 100% 100%;
-    padding: 55px 0 30px;
+    padding: 58px 0 30px;
     margin-top: -30px;
     letter-spacing: 1px;
     .ftnav-list {
-      padding-bottom: 20px;
-      margin-bottom: 30px;
+      padding-bottom: 18px;
+      margin-bottom: 26px;
+      letter-spacing: 2px;
       li {
         &:not(:last-child) {
-          margin-right: 65px;
+          margin-right: 50px;
         }
       }
     }

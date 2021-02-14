@@ -50,6 +50,7 @@
       border-radius: 22.5px;
       height: 45px;
       min-width: 165px;
+      letter-spacing: 2px;
       &:after {
         width: 20px;
         height: 20px;
@@ -65,6 +66,7 @@
       border-radius: vw(35, 750);
       height: vw(70, 750);
       min-width: vw(340, 750);
+      letter-spacing: vw(2, 750);
       &:after {
         width: vw(32, 750);
         height: vw(32, 750);

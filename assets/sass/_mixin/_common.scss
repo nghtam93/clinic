@@ -295,6 +295,10 @@ $pages: 'access', 'clinic', 'information', 'information-detail', 'service', 'sta
 	}
   h2 {
     font-size: 36px;
+    letter-spacing: 3px;
+    span {
+      letter-spacing: 1px;
+    }
   }
   .pagetop {
     a {

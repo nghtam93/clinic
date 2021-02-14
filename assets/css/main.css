@@ -315,7 +315,10 @@ h3 {
     max-width: 1224px; }
 
   h2 {
-    font-size: 36px; }
+    font-size: 36px;
+    letter-spacing: 3px; }
+    h2 span {
+      letter-spacing: 1px; }
 
   .pagetop a {
     width: 86px;
@@ -520,7 +523,8 @@ table {
 
 @media (min-width: 768px) {
   .table-schedule th, .table-schedule td {
-    padding: 13px 15px; }
+    padding: 11px 22px;
+    letter-spacing: 1.8px; }
   .table-schedule thead th:first-child {
     border-top-left-radius: 20px; }
   .table-schedule thead th:last-child {
@@ -532,6 +536,10 @@ table {
 @media (min-width: 1200px) {
   .table-schedule {
     font-size: 22px; } }
+@media (max-width: 1200px) and (min-width: 768px) {
+  .table-schedule th, .table-schedule td {
+    padding: 11px 12px;
+    letter-spacing: 0; } }
 @media (max-width: 1199px) and (min-width: 992px) {
   .table-schedule {
     font-size: 20px; } }
@@ -587,7 +595,8 @@ table {
   .button a {
     border-radius: 22.5px;
     height: 45px;
-    min-width: 165px; }
+    min-width: 165px;
+    letter-spacing: 2px; }
     .button a:after {
       width: 20px;
       height: 20px;
@@ -596,7 +605,8 @@ table {
   .button a {
     border-radius: 4.6666666667vw;
     height: 9.3333333333vw;
-    min-width: 45.3333333333vw; }
+    min-width: 45.3333333333vw;
+    letter-spacing: 0.2666666667vw; }
     .button a:after {
       width: 4.2666666667vw;
       height: 4.2666666667vw;
@@ -699,21 +709,21 @@ header .top-bar {
   border-bottom: 1px solid #bab5b1;
   padding-bottom: 10px; }
 header .footer-bar {
-  margin-top: 20px;
-  line-height: 2; }
+  margin-top: 24px;
+  line-height: 1.9; }
   header .footer-bar p strong a {
     color: #454443; }
   header .footer-bar .button {
-    margin-bottom: 20px; }
+    margin-bottom: 18px; }
   header .footer-bar ul {
-    margin-top: 25px; }
+    margin-top: 19px; }
     header .footer-bar ul li + li {
       margin-left: 12px; }
     header .footer-bar ul li a:hover {
       opacity: 0.8; }
 header nav.navbar {
   margin: 0 auto;
-  padding: 42px 0;
+  padding: 5px 0 42px;
   -webkit-transition: .3s;
   -moz-transition: .3s;
   -ms-transition: .3s;
@@ -778,12 +788,17 @@ header nav.navbar {
           left: -4.5px;
           transform: translateY(-50%); }
 header nav .navbar-brand {
-  padding: 25px 0;
+  padding: 21px 0;
+  margin-bottom: 7px;
   transition: 0.3s; }
+@media (min-width: 1024px) {
+  header .main-banner {
+    padding-top: 8px;
+    margin-bottom: 109px !important; } }
 header .main-banner .slick-slide {
   overflow: hidden;
   position: relative;
-  padding-bottom: 0.4%; }
+  padding-bottom: 0.6%; }
   header .main-banner .slick-slide img {
     width: 100%; }
   header .main-banner .slick-slide div.main-copy {
@@ -830,9 +845,9 @@ header.sticky-header {
 @media (min-width: 1024px) {
   header {
     display: flex;
-    padding: 15px 6%; }
+    padding: 18px 7%; }
     header nav {
-      width: 19.7%; }
+      width: 20.7%; }
       header nav.navbar-expand-md {
         display: block;
         margin: 0; }
@@ -852,8 +867,10 @@ header.sticky-header {
             header nav.navbar-expand-md .navbar-collapse .navbar-nav li a.ani-on:after {
               -webkit-animation: lineMenu 1s forwards;
               animation: lineMenu 1s forwards; }
+      header nav .navbar-brand img {
+        max-width: 277px; }
     header .main-banner {
-      width: 80.3%; }
+      width: 79.3%; }
     header .main-title {
       width: 75.8%; }
     header .footer-bar ul li {
@@ -1271,14 +1288,15 @@ footer .copyright {
   footer {
     background: url("../images/footer_bg.png") no-repeat center top;
     background-size: 100% 100%;
-    padding: 55px 0 30px;
+    padding: 58px 0 30px;
     margin-top: -30px;
     letter-spacing: 1px; }
     footer .ftnav-list {
-      padding-bottom: 20px;
-      margin-bottom: 30px; }
+      padding-bottom: 18px;
+      margin-bottom: 26px;
+      letter-spacing: 2px; }
       footer .ftnav-list li:not(:last-child) {
-        margin-right: 65px; }
+        margin-right: 50px; }
     footer .social li:not(:last-child) {
       margin-right: 12px; }
     footer .social li img {
@@ -1312,7 +1330,7 @@ footer .copyright {
 .sec-news {
   letter-spacing: 1px; }
   .sec-news .button {
-    margin-top: 30px; }
+    margin-top: 32px; }
     .sec-news .button a {
       display: flex;
       max-width: 200px;
@@ -1320,9 +1338,12 @@ footer .copyright {
   .sec-news .sec-news-scroll {
     overflow-y: auto; }
     .sec-news .sec-news-scroll dt {
-      margin-bottom: 5px; }
+      margin-bottom: 6px;
+      letter-spacing: 2px; }
     .sec-news .sec-news-scroll dd {
-      border-bottom: 1px solid #454443; }
+      border-bottom: 1px solid #454443;
+      line-height: 1.88;
+      letter-spacing: 1.8px; }
       .sec-news .sec-news-scroll dd a {
         text-decoration: none;
         color: #454443; }
@@ -1331,6 +1352,9 @@ footer .copyright {
 
 .sec-worktime .worktime-logo {
   background-color: #f5efe4; }
+.sec-worktime p {
+  letter-spacing: 1.8px;
+  line-height: 1.9; }
 .sec-worktime .tel {
   line-height: 1; }
   .sec-worktime .tel a {
@@ -1354,7 +1378,7 @@ footer .copyright {
     padding: 0 10px; }
 .sec-calendar .visca-clinic__item .button a {
   display: flex;
-  max-width: 250px; }
+  max-width: 238px; }
 .sec-calendar .qr-wrap__image img {
   width: 100%; }
 .sec-calendar .social a {
@@ -1518,29 +1542,34 @@ footer .copyright {
   display: flex; }
 
 @media (min-width: 768px) {
-  .sec-news .sec-news-scroll .mCSB_container {
-    padding-right: 10.5%; }
-  .sec-news .sec-news-scroll dd {
-    padding-bottom: 11px;
-    margin-bottom: 11px; }
+  .sec-news {
+    margin-bottom: 122px !important; }
+    .sec-news .sec-news-scroll .mCSB_container {
+      padding-right: 7.8%; }
+    .sec-news .sec-news-scroll dd {
+      padding-bottom: 12px;
+      margin-bottom: 17px; }
 
   .sec-worktime .worktime-logo {
     border-radius: 20px;
     padding: 25px;
-    margin-bottom: 15px; }
+    margin-bottom: 11px; }
     .sec-worktime .worktime-logo img {
       max-width: 86.6%; }
   .sec-worktime .tel {
-    margin: 12px 0 15px; }
+    margin: 6px 0 16px; }
     .sec-worktime .tel a {
       font-size: 30px;
-      letter-spacing: 2px; }
+      letter-spacing: 3px; }
       .sec-worktime .tel a img {
         margin-right: 10px; }
   .sec-worktime .info {
-    width: 90%;
+    width: 84%;
     max-width: 480px;
-    margin-top: 25px; }
+    text-align: right;
+    margin-right: 16%;
+    margin-top: 31px;
+    letter-spacing: 1.7px; }
 
   .visca-clinic__item {
     border-radius: 20px;
@@ -1558,15 +1587,18 @@ footer .copyright {
       line-height: 1.3333333333; }
     .visca-clinic__item h4 {
       font-size: 22px;
-      margin-bottom: 10px;
+      margin-bottom: 9px;
       line-height: 1.3636363636; }
     .visca-clinic__item .txt-info + .qr-wrap {
       margin-top: 15px; }
     .visca-clinic__item .item-tel {
-      margin: 0 auto 10px;
+      margin: 0 auto 6px;
       max-width: 302px;
       border-radius: 34px;
-      padding: 10px 25px; }
+      padding: 10px 25px;
+      letter-spacing: 1.8px; }
+      .visca-clinic__item .item-tel p:not(.tel) {
+        padding-left: 25px; }
       .visca-clinic__item .item-tel .tel {
         margin-top: 5px; }
         .visca-clinic__item .item-tel .tel a {
@@ -1579,7 +1611,7 @@ footer .copyright {
       padding-top: 15px;
       margin-top: 15px; }
     .visca-clinic__item .button {
-      margin-top: 10px; }
+      margin-top: 6px; }
     .visca-clinic__item .qr-wrap {
       width: 100%; }
       .visca-clinic__item .qr-wrap__col6 {
@@ -1594,26 +1626,34 @@ footer .copyright {
           margin: 0 auto;
           max-width: 80px; }
 
-  .sec-calendar .row:not(:last-child) {
-    margin-bottom: 38px; }
-  .sec-calendar h2 {
-    margin-bottom: 60px; }
-  .sec-calendar h3 {
-    margin-bottom: 20px; }
-  .sec-calendar .visca-clinic__item {
-    padding: 15px 8%; }
-  .sec-calendar .qr-wrap {
-    margin-top: 15px; }
-    .sec-calendar .qr-wrap__image img {
-      max-width: 112px; }
-  .sec-calendar .social a img {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%); }
+  .sec-calendar {
+    margin-bottom: 107px !important; }
+    .sec-calendar .row:not(:last-child) {
+      margin-bottom: 42px; }
+    .sec-calendar h2 {
+      margin-bottom: 60px; }
+    .sec-calendar h3 {
+      margin-bottom: 22px; }
+    .sec-calendar h4 {
+      letter-spacing: 2px; }
+    .sec-calendar .visca-clinic__item {
+      padding: 14px 8%; }
+    .sec-calendar .qr-wrap {
+      margin-top: 5px;
+      line-height: 1.6;
+      letter-spacing: 1.8px; }
+      .sec-calendar .qr-wrap__image img {
+        max-width: 112px; }
+    .sec-calendar .social a img {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%); }
 
   .sec-emphasis {
     background: url("../images/emphasis_bg01.png") no-repeat center center/cover;
-    padding: 50px 0; }
+    padding: 50px 0;
+    line-height: 2;
+    letter-spacing: 1.7px; }
     .sec-emphasis h2 {
       margin-bottom: 50px; }
 
@@ -1621,7 +1661,8 @@ footer .copyright {
     background: url("../images/greeting_bg01.png") no-repeat bottom center/cover;
     padding: 200px 0 145px;
     margin-top: -130px;
-    letter-spacing: 1.5px; }
+    letter-spacing: 1.5px;
+    margin-bottom: 91px !important; }
     .sec-greeting [class*="col-"] + [class*="col-"] {
       padding-top: 45px; }
     .sec-greeting h2 {
@@ -1629,45 +1670,59 @@ footer .copyright {
     .sec-greeting h3 {
       color: #454443;
       margin-bottom: 20px;
-      line-height: 1.4; }
+      line-height: 1.4;
+      letter-spacing: 3.3px; }
     .sec-greeting p {
       line-height: 1.875; }
       .sec-greeting p:not(:last-child) {
         margin-bottom: 30px; }
     .sec-greeting .avatar {
-      margin-bottom: 15px; }
+      margin-bottom: 4px;
+      padding-top: 11px; }
     .sec-greeting .user-content {
       max-width: 275px; }
       .sec-greeting .user-content .name {
-        line-height: 1.3666666667;
-        margin-bottom: 20px; }
+        line-height: 1.45;
+        margin-bottom: 14px; }
         .sec-greeting .user-content .name strong {
           font-size: 30px; }
       .sec-greeting .user-content .info-item {
         line-height: 1.875; }
         .sec-greeting .user-content .info-item:not(:last-child) {
-          margin-bottom: 25px; }
+          margin-bottom: 18px; }
         .sec-greeting .user-content .info-item__title {
-          padding-bottom: 5px;
-          margin-bottom: 15px; }
+          padding-bottom: 3px;
+          margin-bottom: 12px; }
     .sec-greeting .button a {
       max-width: 285px; }
 
   .sec-feature {
     background: url("../images/sec-feature_bg001.png") no-repeat left bottom -8%/37%;
     margin-bottom: 0 !important;
-    padding-bottom: 6%; }
+    padding-bottom: 58px; }
     .sec-feature .row:not(:last-child) {
       margin-bottom: 55px; }
+    .sec-feature .row:first-child .feature-content {
+      padding-top: 15px; }
+    .sec-feature .row:nth-child(2) {
+      margin-bottom: 60px; }
+      .sec-feature .row:nth-child(2) h3 {
+        margin-top: -7px;
+        margin-bottom: 20px; }
+    .sec-feature .row:nth-child(3) h3 {
+      margin-top: -17px;
+      margin-bottom: 20px; }
     .sec-feature h2 {
-      margin-bottom: 65px; }
+      margin-bottom: 68px; }
     .sec-feature h3 {
-      line-height: 1.4;
-      margin-bottom: 25px; }
+      line-height: 1.35;
+      margin-bottom: 25px;
+      letter-spacing: 2.9px; }
       .sec-feature h3 .numb {
         font-size: 40px; }
     .sec-feature .feature-content {
-      max-width: 500px; }
+      max-width: 500px;
+      line-height: 1.9; }
     .sec-feature .button {
       margin-top: 25px; }
       .sec-feature .button a {
@@ -1678,31 +1733,33 @@ footer .copyright {
     background-size: 100% 100%;
     margin-bottom: 0 !important; }
     .sec-medical h2 {
-      margin-bottom: 70px; }
+      margin-bottom: 80px; }
     .sec-medical .medical-list__item {
       line-height: 1.3333333333; }
       .sec-medical .medical-list__item .item-image {
-        margin: 0 auto 10px; }
+        margin: 0 auto 14px; }
 
   .sec-facilities {
-    padding: 6% 0;
+    padding: 96px 0 116px;
     background: url("../images/sec-facilities_bg01.png") no-repeat right center/contain;
     margin-bottom: 0 !important; }
     .sec-facilities h2 {
-      margin-bottom: 85px; }
+      margin-bottom: 114px; }
     .sec-facilities .slider-item__content {
       max-width: 320px;
       padding: 0 20px;
       margin: 0 auto; }
     .sec-facilities .slider-item .item-content {
-      margin-top: 10px; }
+      margin-top: 12px;
+      line-height: 1.9; }
       .sec-facilities .slider-item .item-content h3 {
-        margin-bottom: 10px;
-        line-height: 1.3; }
+        margin-bottom: 14px;
+        line-height: 1.3;
+        font-size: 24px; }
     .sec-facilities .slider-item.slick-center .item-content {
       margin-top: 35px; }
     .sec-facilities .button {
-      margin-top: 35px; }
+      margin-top: 33px; }
       .sec-facilities .button a {
         display: flex;
         max-width: 285px;
@@ -1721,67 +1778,81 @@ footer .copyright {
         background: url("../images/slider_arrow_right.png") no-repeat center center/cover;
         right: 36.5%; }
 
-  .sec-map .row:not(:last-child) {
-    margin-bottom: 40px; }
-  .sec-map .map-info {
-    border-radius: 30px;
-    padding: 30px; }
-    .sec-map .map-info__map {
-      width: 47%;
-      margin-right: 4.5%; }
-      .sec-map .map-info__map .map-container {
-        border-radius: 30px;
-        padding-top: 0;
-        height: calc(100% - 90px);
-        margin-bottom: 40px; }
-      .sec-map .map-info__map .button a {
-        max-width: 285px; }
-    .sec-map .map-info__text {
-      width: 48.5%; }
-    .sec-map .map-info dl dt {
-      margin: 0;
-      padding: 15px 10px 15px 3px; }
-      .sec-map .map-info dl dt:first-child {
-        padding-top: 0; }
-    .sec-map .map-info dl dd {
-      padding: 15px 8px 15px 0; }
-      .sec-map .map-info dl dd:nth-child(2) {
-        padding-top: 0; }
+  .sec-map {
+    margin-bottom: 130px !important; }
+    .sec-map .row:not(:last-child) {
+      margin-bottom: 40px; }
+    .sec-map .map-info {
+      border-radius: 30px;
+      padding: 30px; }
+      .sec-map .map-info__map {
+        width: 47%;
+        margin-right: 4.5%; }
+        .sec-map .map-info__map .map-container {
+          border-radius: 30px;
+          padding-top: 0;
+          height: calc(100% - 90px);
+          margin-bottom: 47px; }
+        .sec-map .map-info__map .button a {
+          max-width: 285px; }
+      .sec-map .map-info__text {
+        width: 48.5%; }
+      .sec-map .map-info dl dt {
+        margin: 0;
+        padding: 15px 10px 15px 3px; }
+        .sec-map .map-info dl dt:first-child {
+          padding-top: 0; }
+      .sec-map .map-info dl dd {
+        padding: 15px 8px 15px 0;
+        letter-spacing: 1.8px;
+        line-height: 1.86; }
+        .sec-map .map-info dl dd:nth-child(2) {
+          padding-top: 0; }
 
   .sec-service {
     background: url("../images/medical_bg001.png") no-repeat center center;
-    background-size: 100% 100%; }
+    background-size: 100% 100%;
+    margin-bottom: 106px !important; }
     .sec-service .service-image {
-      margin-bottom: 20px; }
+      margin-bottom: 25px; }
     .sec-service .service-content {
       max-width: 354px;
-      margin: 0 auto; }
+      margin: 0 auto;
+      line-height: 1.9; }
     .sec-service h4 {
       padding: 16px 20px;
       border-radius: 31px;
-      margin-bottom: 20px; }
+      margin-bottom: 17px;
+      letter-spacing: 2.5px; }
 
-  .sec-cooperate .row:not(:last-child) {
-    margin-bottom: 45px; }
-  .sec-cooperate [class*="col-"]:nth-child(n+5) {
-    margin-top: 24px; }
-  .sec-cooperate h2 {
-    margin-bottom: 50px; }
-  .sec-cooperate .cooperate-item {
-    border-radius: 20px;
-    padding: 25px; }
+  .sec-cooperate {
+    margin-bottom: 111px !important; }
+    .sec-cooperate .row:not(:last-child) {
+      margin-bottom: 42px;
+      line-height: 1.9;
+      letter-spacing: 1.7px; }
+    .sec-cooperate [class*="col-"]:nth-child(n+5) {
+      margin-top: 24px; }
+    .sec-cooperate h2 {
+      margin-bottom: 50px; }
+    .sec-cooperate .cooperate-item {
+      border-radius: 20px;
+      padding: 25px;
+      letter-spacing: 1.85px; }
 
   .sec-sns .row:not(:last-child) {
-    margin-bottom: 45px; }
+    margin-bottom: 36px; }
   .sec-sns h2 {
-    margin-bottom: 40px; }
+    margin-bottom: 38px; }
   .sec-sns h3 {
     line-height: 1.4666666667;
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    letter-spacing: 3.4px; }
   .sec-sns .sns-wrap {
     font-size: 14px;
     min-height: 400px;
-    border-radius: 30px; }
+    border-radius: 30px;
+    letter-spacing: 2px; }
 
   .visca-clinic {
     background: url("../images/visca-clinic_bg001.png") no-repeat center center;
@@ -1826,17 +1897,19 @@ footer .copyright {
     padding-left: 15%; }
 
   .sec-medical {
-    padding: 120px 0 180px; }
+    padding: 120px 0 190px; }
     .sec-medical .medical-list__item {
       font-size: 18px;
       width: calc((100% - 80px) / 5); }
       .sec-medical .medical-list__item:not(:nth-child(5n)) {
         margin-right: 20px; }
       .sec-medical .medical-list__item:nth-child(n+6) {
-        margin-top: 50px; }
+        margin-top: 59px; }
       .sec-medical .medical-list__item .item-image {
         width: 114px;
         height: 114px; }
+      .sec-medical .medical-list__item .item-title {
+        letter-spacing: 2px; }
 
   .sec-map .map-info dl dt {
     width: 100px; }
@@ -1849,17 +1922,22 @@ footer .copyright {
       font-size: 24px; }
 
   .visca-clinic {
-    padding: 125px 0 150px; } }
+    padding: 116px 0 153px; } }
 @media (min-width: 1200px) {
   .sec-news .sec-news-scroll {
-    max-height: 185px; }
+    max-height: 185px;
+    line-height: 1.2; }
 
   .sec-calendar h3 {
-    font-size: 24px; }
+    font-size: 24px;
+    line-height: 1.3;
+    letter-spacing: 2.2px;
+    padding-left: 15px; }
   .sec-calendar h4 {
     font-size: 22px; }
   .sec-calendar .social a {
-    padding: 30px 32px; }
+    padding: 30px 32px 30px 57px;
+    letter-spacing: 4px; }
     .sec-calendar .social a img {
       left: 32px; } }
 @media (max-width: 1600px) and (min-width: 1336px) {
