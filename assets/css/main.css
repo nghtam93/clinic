@@ -862,7 +862,7 @@ header.sticky-header {
             header nav.navbar-expand-md .navbar-collapse .navbar-nav li a span {
               display: block;
               transform: translateX(-100%);
-              transition: 0.5s ease-in; }
+              transition: 0.3s ease-in; }
             header nav.navbar-expand-md .navbar-collapse .navbar-nav li a:after {
               content: '';
               position: absolute;
@@ -2306,7 +2306,7 @@ footer .copyright {
         line-height: 1.26;
         letter-spacing: 0.5333333333vw;
         padding-left: 2.6666666667vw; }
-        .sec-greeting .user-content .name strong {
+        .sec-greeting .user-content .name .name_txt {
           font-size: 6.6666666667vw; }
       .sec-greeting .user-content .info-item:not(:last-child) {
         margin-bottom: 2.4vw; }

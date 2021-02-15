@@ -90,7 +90,7 @@ $(window).on('load', function() {
   $('.navbar-nav').addClass('load-end');
   setTimeout(function(){ 
     $('.navbar-nav.load-end').addClass('show-menu')
-  }, 3000);
+  }, 2500);
 })
 
 $(document).ready(function(){
