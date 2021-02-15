@@ -34,45 +34,65 @@ $(function() {
           }
         });
       }
-    },
-
-    steen.concept = {
-      init:function() {
-        steen.concept.random();
-        steen.concept.start();
-      },
-      random:function() {
-        $('.sec-facilities__slider > .slider-item').sort(function() {
-          return Math.round(Math.random()) - 0.5;
-        }).detach().appendTo($('.sec-facilities__slider'));
-      },
-      start:function() {
-        var concept = $('.sec-facilities__slider').slick({
-          autoplay: true,
-          pauseOnHover: false,
-          dots: false,
-          arrows: false,
-          infinite: true,
-          autoplaySpeed: 0,
-          cssEase: 'linear',
-          speed: 10000,
-          slidesToShow: 5,
-          slidesToScroll: 1,
-          swipe: false,
-          responsive: [
-            {
-              breakpoint: 767,
-              settings: {
-                slidesToShow: 3
-              }
-            }
-          ]
-        });
-      }
     }
+
+    // steen.concept = {
+    //   init:function() {
+    //     steen.concept.random();
+    //     steen.concept.start();
+    //   },
+    //   random:function() {
+    //     $('.sec-facilities__slider > .slider-item').sort(function() {
+    //       return Math.round(Math.random()) - 0.5;
+    //     }).detach().appendTo($('.sec-facilities__slider'));
+    //   },
+    //   start:function() {
+    //     var concept = $('.sec-facilities__slider').slick({
+    //       autoplay: true,
+    //       pauseOnHover: false,
+    //       dots: false,
+    //       arrows: false,
+    //       infinite: true,
+    //       autoplaySpeed: 0,
+    //       cssEase: 'linear',
+    //       speed: 10000,
+    //       slidesToShow: 5,
+    //       slidesToScroll: 1,
+    //       swipe: false,
+    //       responsive: [
+    //         {
+    //           breakpoint: 1200,
+    //           settings: {
+    //             slidesToShow: 4
+    //           }
+    //         },
+    //         {
+    //           breakpoint: 851,
+    //           settings: {
+    //             slidesToShow: 3
+    //           }
+    //         },
+    //         {
+    //           breakpoint: 751,
+    //           settings: {
+    //             slidesToShow: 1
+    //           }
+    //         }
+    //       ]
+    //     });
+    //   }
+    // }
 
   } catch(e) {};
 });
+
+$(window).on('load', function() {
+  $('.navbar-nav').addClass('load-end');
+  setTimeout(function(){ 
+    $('.navbar-nav.load-end').addClass('show-menu')
+  }, 3000);
+})
+
 $(document).ready(function(){
 
   /*----header----*/
@@ -81,15 +101,9 @@ $(document).ready(function(){
     $('body').toggleClass('hidden');
   });
 
-  var num = $('ul.navbar-nav li').length;
-  var j = 0;
-  for( var i = 1; i <= num; i++ ) {
-    j = i + 1;
-    $("ul.navbar-nav li:nth-child("+i+") a").on('transitionend', function() {
-      $("ul.navbar-nav li:nth-child("+j+") a").addClass('ani-on');
-      console.log(j);
-    })
-  }
+  $(".navbar-nav.load-end li:last-child a:after").on('transitionend', function() {
+    $(".navbar-nav.load-end").addClass('ani-on');
+  })
 
   /*----Back to Top----*/
 	$(window).scroll(function() {
@@ -139,7 +153,7 @@ $(document).ready(function(){
 $(window).on("load", function(){
   $(document).ready(function() {
     steen.scene.init();
-    steen.concept.init();
+    // steen.concept.init();
   });
 });
 

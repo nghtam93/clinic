@@ -89,7 +89,7 @@ header {
                 background: #be724a;
                 border-radius: 50%;
                 top: 50%;
-                left: -2px;
+                left: 2px;
                 transform: translateY(-50%);
                 -webkit-transition: .3s;
                 -moz-transition: .3s;
@@ -114,7 +114,7 @@ header {
                 &:before {
                   width: 8px;
                   height: 8px;
-                  left: -4.5px;
+                  left: 0;
                   transform: translateY(-50%);
                 }
               }
@@ -232,19 +232,73 @@ header {
               a {
                 padding: 19px 20px !important;
                 display: block;
-                transition: 1s;
+                overflow: hidden;
+                span {
+                  display: block;
+                  transform: translateX(-100%);
+                  transition: 0.5s ease-in;
+                }
                 &:after {
                   content: '';
                   position: absolute;
                   width: 1px;
+                  height: 0;
                   border-left: 1px solid #cec8ba;
                   top: 0;
-                  left: 0;
+                  left: 4px;
+                  transition: 0.5s;
                 }
-                &.ani-on {
+              }
+              &:nth-child(2) {
+                a {
                   &:after {
-                    -webkit-animation: lineMenu 1s forwards;
-                    animation: lineMenu 1s forwards;
+                    transition-delay: 0.5s;
+                  }
+                }
+              }
+              &:nth-child(3) {
+                a {
+                  &:after {
+                    transition-delay: 1s;
+                  }
+                }
+              }
+              &:nth-child(4) {
+                a {
+                  &:after {
+                    transition-delay: 1.5s;
+                  }
+                }
+              }
+              &:nth-child(5) {
+                a {
+                  &:after {
+                    transition-delay: 2s;
+                  }
+                }
+              }
+              &:nth-child(6) {
+                a {
+                  &:after {
+                    transition-delay: 2.5s;
+                  }
+                }
+              }
+            }
+            &.load-end {
+              li {
+                a {
+                  &:after {
+                    height: 100%;
+                  }
+                }
+              }
+              &.show-menu {
+                li {
+                  a {
+                    span {
+                      transform: translateX(0);
+                    }
                   }
                 }
               }
@@ -697,8 +751,9 @@ header {
 @media (max-width: 767px) {
   header {
     .top-bar {
-      padding: vw(15, 750);
+      padding: vw(12, 750);
       font-size: vw(22, 750);
+      letter-spacing: vw(2, 750);
     }
     nav {
       .navbar-brand {
@@ -785,12 +840,13 @@ header {
     }
     .main-banner {
       padding: vw(166, 750) vw(15, 750) 0;
+      margin-bottom: vw(50, 750) !important;
       .slick-slide {
-        padding-bottom: vw(180, 750);
+        padding-bottom: vw(172, 750);
         div {
           &.main-copy {
             max-width: vw(380, 750);
-            left: vw(60, 750);
+            left: vw(50, 750);
           }
         }
       }
@@ -865,7 +921,7 @@ header {
         height: vw(166, 750);
         .navbar-toggler {
           left: vw(30, 750);
-          top: vw(95, 750);
+          top: vw(86, 750);
         }
         &.active {
           height: 100vh;

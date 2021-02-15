@@ -31,19 +31,19 @@
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto justify-content-center">
           <li class="nav-item active">
-            <a href="#" class="ani-on">トップ</a>
+            <a href="#"><span>トップ</span></a>
           </li>
           <li class="nav-item">
-            <a href="#">診療案内</a>
+            <a href="#"><span>診療案内</span></a>
           </li>
           <li class="nav-item">
-            <a href="#">院長・スタッフ</a>
+            <a href="#"><span>院長・スタッフ</span></a>
           </li>
           <li class="nav-item">
-            <a href="#">院内・設備</a>
+            <a href="#"><span>院内・設備</span></a>
           </li>
           <li class="nav-item">
-            <a href="#">アクセス</a>
+            <a href="#"><span>アクセス</span></a>
           </li>
         </ul>
       </div>
@@ -262,8 +262,8 @@
             </div>
             <div class="user-content">
               <p class="name text-center">
-                院長<br />
-                <strong>日本 ビスカ</strong><br />
+                <strong>院長</strong><br />
+                <strong class="name_txt">日本 ビスカ</strong><br />
                 にほん びすか
               </p>
               <div class="info-item">
@@ -289,7 +289,7 @@
             <p>
               【日本ビスカ歯科医院】は私の父が開院して以来、<br />
               この地域の方々の「お口の健康」を守るお手伝いをしてまいりました。<br />
-              私自身もこの地で生まれ、地元の皆さまに温かく見守られて育ちましたので、こうして医療で貢献できることに嬉しい気持ちでいっぱいです。
+              私自身もこの地で生まれ、地元の皆さまに温かく見守られて育ちましたので、<br class="d-pc-none" />こうして医療で貢献できることに嬉しい気持ちでいっぱいです。
             </p>
             <p>
               これからも「患者さんファースト」の想いを大切に、カウンセリングには十分に時間をかけ、新しい技術や治療方法も取り入れながら、皆さまに少しでもご恩返しができれば幸いです。
@@ -709,11 +709,21 @@
         <div class="row">
           <div class="col-md-6 wow fadeInLeft">
             <h3 class="text-center">Facebook</h3>
-            <div class="sns-wrap">Facebook</div>
+            <div class="sns-wrap">
+              <div id="fb-root"></div>
+              <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v9.0" nonce="3QRTzZOk"></script>
+              <div class="fb-page" data-href="https://www.facebook.com/%E6%97%A5%E6%9C%AC%E3%83%93%E3%82%B9%E3%82%AB%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE-341352426001932/" data-tabs="timeline" data-width="500" style="width: 100%;" data-height="360" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+              <blockquote cite="https://www.facebook.com/%E6%97%A5%E6%9C%AC%E3%83%93%E3%82%B9%E3%82%AB%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE-341352426001932/" class="fb-xfbml-parse-ignore">
+              <a href="https://www.facebook.com/%E6%97%A5%E6%9C%AC%E3%83%93%E3%82%B9%E3%82%AB%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE-341352426001932/">日本ビスカ株式会社</a>
+              </blockquote>
+              </div>
+            </div>
           </div>
           <div class="col-md-6 wow fadeInRight">
             <h3 class="text-center">Twitter</h3>
-            <div class="sns-wrap">Twitter</div>
+            <div class="sns-wrap">
+              <a class="twitter-timeline" href="https://twitter.com/Hpseisaku_VISCA?ref_src=twsrc%5Etfw" data-height="330" style="width: 100%;">Tweets by Hpseisaku_VISCA</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
           </div>
         </div>
 
@@ -808,14 +818,14 @@
   <script src="./assets/libs/slick_slider/js/slick.min.js"></script>
   <script src="./assets/js/main.js"></script>
 
-  <!-- <script>
+  <script>
     $('.sec-facilities__slider').slick({
       centerMode: true,
       centerPadding: '260px',
       slidesToShow: 3,
       arrows: true,
       autoplay: true,
-      autoplaySpeed: 2000,
+      autoplaySpeed: 1500,
       easing: "linear",
       responsive: [
         {
@@ -843,7 +853,7 @@
         },
       ]
     });
-  </script> -->
+  </script>
 </body>
 
 </html>

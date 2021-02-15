@@ -446,10 +446,12 @@ $pages: 'access', 'clinic', 'information', 'information-detail', 'service', 'sta
 		font-size: vw(46, 750);
 		line-height: (64/46);
 		margin-bottom: vw(35, 750);
-    letter-spacing: 3px;
+    letter-spacing: vw(4.4, 750);
 		span {
 			font-size: vw(22, 750);
 			text-align: center;
+      letter-spacing: vw(2, 750);
+      margin-bottom: vw(6, 750);
 		}
 	}
   .sec__title {

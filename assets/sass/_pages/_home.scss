@@ -541,7 +541,7 @@
       .name {
         line-height: 1.45;
         margin-bottom: 14px;
-        strong {
+        .name_txt {
           font-size: 30px;
         }
       }
@@ -638,6 +638,7 @@
       margin-bottom: 114px;
     }
     .slider-item {
+      padding-top: 30px;
       &__content {
         max-width: 320px;
         padding: 0 20px;
@@ -791,10 +792,20 @@
       letter-spacing: 3.4px;
     }
     .sns-wrap {
+      position: relative;
       font-size: 14px;
       min-height: 400px;
       border-radius: 30px;
       letter-spacing: 2px;
+      padding: 20px;
+      text-align: center;
+      >iframe {
+        position: absolute !important;
+        width: calc(100% - 40px) !important;
+        height: calc(100% - 40px) !important;
+        left: 20px;
+        top: 20px;
+      }
     }
   }
 
@@ -966,7 +977,10 @@
 @media ( max-width: 1335px ) and ( min-width: 1200px ) {
   .sec-facilities {
     .slider-item {
-      margin: 0 30px;
+      margin: 0 15px;
+      &__content {
+        padding: 0;
+      }
       h3 {
         font-size: 20px;
       }
@@ -1041,6 +1055,16 @@
   }
 }
 
+@media ( max-width: 1199px ) and ( min-width: 768px ) {
+  .sec-facilities {
+    .slider-item {
+      &__content {
+        padding: 0;
+      }
+    }
+  }
+}
+
 @media ( max-width: 991px ) {
   .sec-emphasis {
     min-height: 500px;
@@ -1058,8 +1082,10 @@
       &__content {
         padding: 0 10px;
       }
-      h3 {
-        font-size: 16px;
+      .item-content {
+        h3 {
+          font-size: 16px;
+        }
       }
     }
     .slick-arrow {
@@ -1218,12 +1244,22 @@
     [class*="col-"] {
       position: static;
     }
+    h2 {
+      margin-bottom: vw(28, 750);
+    }
     .sec-news-scroll {
-      max-height: vw(320, 750);
+      max-height: vw(300, 750);
+      dt {
+        margin-bottom: 0;
+        letter-spacing: vw(1, 750);
+        line-height: 1.6;
+      }
       dd {
         padding-right: 7%;
         padding-bottom: vw(20, 750);
-        margin-bottom: vw(15, 750);
+        margin-bottom: vw(8, 750);
+        line-height: 1.7;
+        letter-spacing: vw(2.2, 750);
       }
     }
     .button {
@@ -1231,7 +1267,7 @@
       width: 100%;
       bottom: 0;
       left: 0;
-      padding: 0 30px;
+      padding: 0 vw(30, 750);
       a {
         max-width: none;
         min-width: 0;
@@ -1240,11 +1276,15 @@
   }
 
   .sec-worktime {
-    letter-spacing: 2px;
+    margin-bottom: vw(188, 750) !important;
     [class*="col-"] {
       &:not(:last-child) {
         margin-bottom: vw(40, 750);
       }
+    }
+    p {
+      letter-spacing: vw(2.1, 750);
+      line-height: 1.7;
     }
     .worktime-logo {
       max-width: vw(540, 750);
@@ -1256,7 +1296,8 @@
       }
     }
     .tel {
-      margin: vw(20, 750) 0;
+      margin: vw(16, 750) 0 vw(18, 750);
+      letter-spacing: vw(4.4, 750);
       a {
         font-size: vw(42, 750);
         img {
@@ -1301,14 +1342,14 @@
     }
     .item-tel {
       max-width: vw(425, 750);
-      margin: 0 auto vw(12, 750);
+      margin: 0 auto vw(8, 750);
       border-radius: vw(48, 750);
-      padding: vw(10, 750) vw(30, 750);
+      padding: vw(12, 750) vw(30, 750);
       .tel {
-        margin-top: vw(5, 750);
+        margin-top: vw(8, 750);
         a {
           font-size: vw(40, 750);
-          letter-spacing: vw(2, 750);
+          letter-spacing: vw(4, 750);
           img {
             width: vw(34, 750);
             margin-right: vw(15, 750);
@@ -1320,6 +1361,11 @@
       margin-top: vw(12, 750);
     }
     .qr-wrap {
+      &__text {
+        .button {
+          max-width: vw(360, 750);
+        }
+      }
       &__col6 {
         width: 100%;
         margin-bottom: vw(38, 750);
@@ -1338,12 +1384,13 @@
   }
 
   .sec-calendar {
+    margin-bottom: vw(196, 750) !important;
     .row {
       &:not(:last-child):not(.social) {
         margin-bottom: vw(130, 750);
         [class*="col-"] {
           &:not(:last-child) {
-            margin-bottom: vw(65, 750);
+            margin-bottom: vw(58, 750);
           }
         }
       }
@@ -1351,22 +1398,29 @@
     .social {
       [class*="col-"] {
         &:not(:last-child) {
-          margin-bottom: vw(40, 750);
+          margin-bottom: vw(26, 750);
         }
+      }
+      a {
+        letter-spacing: vw(3, 750);
       }
     }
     h2 {
       margin-bottom: vw(40, 750);
     }
     h3 {
-      margin-bottom: vw(30, 750);
+      margin-bottom: vw(26, 750);
+      letter-spacing: vw(4, 750);
+      span {
+        padding: 0;
+      }
     }
     h4 {
       font-size: vw(30, 750);
       margin-bottom: vw(25, 750);
     }
     .visca-clinic__item {
-      padding: vw(25, 750) vw(50, 750);
+      padding: vw(25, 750) vw(50, 750) vw(16, 750);
     }
     .qr-wrap {
       &__image {
@@ -1407,28 +1461,32 @@
   .sec-greeting {
     background: url('../images/sp_greeting_bg01.png') no-repeat center center;
     background-size: 100% 100%;
-    padding: vw(350, 750) 0 vw(150, 750);
+    padding: vw(292, 750) 0 vw(160, 750);
     margin-top: - vw(100, 750);
+    margin-bottom: vw(174, 750) !important;
     letter-spacing: vw(2, 750);
     [class*="col-"] {
       +[class*="col-"] {
-        margin-top: vw(50, 750);
+        margin-top: vw(32, 750);
+        line-height: 1.65;
       }
     }
     h2 {
-      margin-bottom: vw(40, 750);
+      margin-bottom: vw(46, 750);
     }
     h3 {
-      margin-bottom: vw(25, 750);
-      letter-spacing: vw(4, 750);
+      margin-bottom: vw(18, 750);
+      letter-spacing: vw(4.4, 750);
     }
     p {
+      letter-spacing: vw(1.9, 750);
       &:not(:last-child) {
         margin-bottom: vw(40, 750);
       }
     }
     .avatar {
-      margin-bottom: vw(15, 750);
+      margin-bottom: vw(10, 750);
+      padding-right: vw(46, 750);
       img {
         width: vw(510, 750);
       }
@@ -1437,35 +1495,41 @@
       max-width: vw(370, 750);
       .name {
         margin-bottom: vw(30, 750);
-        line-height: (57/50);
+        line-height: 1.26;
+        letter-spacing: vw(4, 750);
+        padding-left: vw(20, 750);
         strong {
           font-size: vw(50, 750);
         }
       }
       .info-item {
         &:not(:last-child) {
-          margin-bottom: vw(25, 750);
+          margin-bottom: vw(18, 750);
         }
         &__title {
-          padding-bottom: vw(10, 750);
-          margin-bottom: vw(15, 750);
+          padding-bottom: vw(6, 750);
+          margin-bottom: vw(10, 750);
         }
       }
+    }
+    .button {
+      margin-top: - vw(10, 750);
     }
   }
 
   .sec-feature {
     letter-spacing: vw(2, 750);
+    margin-bottom: vw(180, 750) !important;
     .row {
       &:not(:last-child) {
-        margin-bottom: vw(130, 750);
+        margin-bottom: vw(136, 750);
       }
     }
     h2 {
-      margin-bottom: vw(65, 750);
+      margin-bottom: vw(60, 750);
     }
     h3 {
-      margin-bottom: vw(25, 750);
+      margin-bottom: vw(16, 750);
       letter-spacing: vw(4, 750);
       .numb {
         font-size: vw(56, 750);
@@ -1479,7 +1543,8 @@
   .sec-medical {
     background: url('../images/sp_medical_bg001.png') no-repeat center center;
     background-size: 100% 100%;
-    padding: vw(75, 750) 0 vw(170, 750);
+    padding: vw(88, 750) 0 vw(200, 750);
+    margin-bottom: vw(176, 750) !important;
     h2 {
       margin-bottom: vw(60, 750);
     }
@@ -1492,7 +1557,7 @@
         .item-image {
           width: vw(175, 750);
           height: vw(175, 750);
-          margin: 0 auto vw(10, 750);
+          margin: 0 auto vw(18, 750);
           img {
             max-width: 65%;
             max-height: 65%;
@@ -1508,8 +1573,9 @@
 
   .sec-facilities {
     padding: 0 vw(30, 750);
+    margin-bottom: vw(112, 750) !important;
     h2 {
-      margin-bottom: vw(50, 750);
+      margin-bottom: vw(44, 750);
     }
     .slider-item {
       padding-top: vw(30, 750);
@@ -1522,7 +1588,7 @@
         max-width: vw(460, 750);
         letter-spacing: vw(2, 750);
         h3 {
-          margin-bottom: vw(20, 750);
+          margin-bottom: vw(16, 750);
         }
       }
     }
@@ -1552,10 +1618,14 @@
   }
 
   .sec-map {
+    margin-bottom: vw(124, 750) !important;
     .row {
       &:not(:last-child) {
         margin-bottom: vw(60, 750);
       }
+    }
+    .sec-worktime {
+      margin-bottom: 0 !important;
     }
     .map-info {
       border-radius: vw(30, 750);
@@ -1565,7 +1635,7 @@
         padding: 0 vw(10, 750);
         margin-bottom: vw(65, 750);
         .map-container {
-          height: vw(532, 750);
+          height: vw(502, 750);
           padding-top: 0;
           border-radius: vw(30, 750);
           margin-bottom: vw(20, 750);
@@ -1575,13 +1645,14 @@
         letter-spacing: vw(1.8, 750);
         dt {
           width: vw(150, 750);
-          padding: vw(25, 750) 0;
+          padding: vw(20, 750) 0;
           +dd {
             padding-left: vw(150, 750);
           }
         }
         dd {
-          padding: vw(25, 750) 0;
+          padding: vw(20, 750) 0;
+          letter-spacing: vw(1.9, 750);
         }
       }
     }
@@ -1590,7 +1661,8 @@
   .sec-service {
     background: url('../images/sp_service_bg001.png') no-repeat center center;
     background-size: 100% 100%;
-    padding: vw(170, 750) 0;
+    padding: vw(194, 750) 0 vw(176, 750);
+    margin-bottom: vw(124, 750) !important;
     [class*="col-"] {
       &:not(:last-child) {
         margin-bottom: vw(60, 750);
@@ -1598,6 +1670,9 @@
     }
     .service-image {
       margin-bottom: vw(30, 750);
+      img {
+        max-width: 15%;
+      }
     }
     .service-content {
       max-width: vw(548, 750);
@@ -1610,14 +1685,16 @@
     h4 {
       padding: vw(30, 750);
       border-radius: vw(48, 750);
-      margin-bottom: vw(20, 750);
+      margin-bottom: vw(14, 750);
     }
   }
 
   .sec-cooperate {
+    margin-bottom: vw(186, 750);
     .row {
       &:not(:last-child) {
-        margin-bottom: vw(55, 750);
+        margin-bottom: vw(50, 750);
+        letter-spacing: vw(2, 750);
       }
     }
     [class*="col-"] {
@@ -1626,11 +1703,12 @@
       }
     }
     h2 {
-      margin-bottom: vw(40, 750);
+      margin-bottom: vw(24, 750);
     }
     .cooperate-item {
       border-radius: vw(20, 750);
       padding: vw(42, 750);
+      letter-spacing: vw(2.4, 750);
     }
   }
 
@@ -1651,20 +1729,30 @@
       }
     }
     h2 {
-      margin-bottom: vw(45, 750);
+      margin-bottom: vw(38, 750);
     }
     h3 {
       margin-bottom: vw(30, 750);
+      letter-spacing: vw(4, 750);
     }
     .sns-wrap {
+      position: relative;
       min-height: vw(500, 750);
       border-radius: vw(30, 750);
+      padding: vw(20, 750);
+      >iframe {
+        position: absolute !important;
+        width: calc(100% - 5.33vw) !important;
+        height: calc(100% - 5.33vw) !important;
+        left: vw(20, 750);
+        top: vw(20, 750);
+      }
     }
   }
 
   .visca-clinic {
     background: url('../images/sp_visca-clinic_bg001.png') no-repeat center center;
-    padding: vw(200, 750) 0;
+    padding: vw(200, 750) 0 vw(240, 750);
     background-size: 100% 100%;
     [class*="col-"] {
       &:not(:last-child) {
