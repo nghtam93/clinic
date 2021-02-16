@@ -58,12 +58,16 @@
   .breadcrumbs {
     padding: vw(10, 750) vw(30, 750);
     .breadcrumb {
-      margin-bottom: vw(40, 750);
+      margin-bottom: vw(34, 750);
+      letter-spacing: vw(2, 750);
+      img {
+        max-width: vw(21, 750);
+      }
       .breadcrumb-item {
         +.breadcrumb-item {
-          padding-left: vw(20, 750);
+          padding-left: vw(12, 750);
           &:before {
-            padding-right: vw(20, 750);
+            padding-right: vw(12, 750);
           }
         }
       }

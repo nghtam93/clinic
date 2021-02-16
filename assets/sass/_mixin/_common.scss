@@ -433,7 +433,7 @@ $pages: 'access', 'clinic', 'information', 'information-detail', 'service', 'sta
   .page-title {
     height: vw(200, 750);
     margin-left: vw(30, 750);
-    margin-bottom: vw(100, 750);
+    margin-bottom: vw(104, 750);
     padding-right: vw(30, 750);
     display: flex;
     align-items: center;
@@ -447,9 +447,11 @@ $pages: 'access', 'clinic', 'information', 'information-detail', 'service', 'sta
       font-size: vw(64, 750);
       text-align: center;
       padding: vw(20, 750);
+      letter-spacing: vw(8, 750);
       span {
         font-size: vw(24, 750);
         margin-bottom: vw(10, 750);
+        letter-spacing: vw(3, 750);
       }
     }
   }
@@ -466,7 +468,7 @@ $pages: 'access', 'clinic', 'information', 'information-detail', 'service', 'sta
 		}
 	}
   .sec__title {
-    margin-bottom: vw(80, 750);
+    margin-bottom: vw(50, 750);
     padding-bottom: vw(15, 750);
     &:after {
       width: vw(100, 750);
@@ -544,6 +546,13 @@ $pages: 'access', 'clinic', 'information', 'information-detail', 'service', 'sta
         padding-top: vw(20, 750);
       }
     }
+  }
+
+  .mb-sp-120 {
+    margin-bottom: vw(120, 750) !important;
+  }
+  .mb-sp-174 {
+    margin-bottom: vw(174, 750) !important;
   }
 }
 

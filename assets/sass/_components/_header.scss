@@ -942,7 +942,7 @@ header {
       }
     }
     .main-title {
-      margin-top: vw(90, 750);
+      margin-top: vw(129, 750);
     }
   }
 
@@ -950,16 +950,34 @@ header {
     header {
       background: url('../images/sp_bg_body.png') no-repeat right center;
       background-size: vw(351, 750);
-      nav.navbar {
-        height: vw(166, 750);
-        .navbar-toggler {
-          left: vw(30, 750);
-          top: vw(86, 750);
-        }
-        &.active {
-          height: 100vh;
+      nav {
+        &.navbar {
+          height: vw(166, 750);
           .navbar-toggler {
-            top: vw(30, 750);
+            left: vw(30, 750);
+            top: vw(86, 750);
+          }
+          &.active {
+            height: 100vh;
+            .navbar-toggler {
+              top: vw(30, 750);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  body {
+    &:not(.home) {
+      header {
+        nav {
+          .navbar-brand {
+            margin: vw(50, 750) auto;
+            max-width: vw(277, 750);
+          }
+          &.navbar {
+            height: vw(129, 750);
           }
         }
       }

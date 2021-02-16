@@ -11,8 +11,8 @@
         margin-top: 93px;
         margin-bottom: 33px;
         @media (max-width: 767px) {
-            margin-top: vw(140, 750);
-            margin-bottom: vw(40, 750);
+            margin-top: vw(150, 750);
+            margin-bottom: vw(38, 750);
         }
         a {
             width: 285px;
@@ -45,6 +45,9 @@
         border-radius: 30px;
         .sec__title--small {
             color: #be724a;
+        }
+        @media ( max-width: 767pxc ) {
+            border-radius: vw(30, 750);
         }
     }
     &__list {
@@ -185,7 +188,11 @@
 @media (max-width: 767px) {
     .sec-traffic {
         &__content {
-            padding: vw(55, 850) vw(95, 750) vw(70, 750);
+            padding: vw(50, 850) vw(95, 750) vw(70, 750);
+            margin-bottom: vw(28, 750);
+            h2 {
+                margin-bottom: vw(28, 750);
+            }
         }
         &__list {
             &__item {
@@ -195,23 +202,28 @@
                 &:not(:last-child) {
                     margin-bottom: vw(40, 750);
                 }
+                img {
+                    max-width: 18%;
+                }
             }
         }
         &__thumb {
-            margin-bottom: 15px;
+            margin-bottom: vw(14, 750);
         }
         &__info {
-            letter-spacing: vw(1.3, 750);
+            letter-spacing: vw(2.6, 750);
             h4 {
-                padding-bottom: vw(10, 750);
-                margin-bottom: vw(25, 750);
+                padding-bottom: vw(16, 750);
+                margin-bottom: vw(20, 750);
+                font-size: vw(24, 750);
+                letter-spacing: vw(2, 750);
             }
         }
     }
     
     .item-access {
         &__thumb {
-            margin-bottom: vw(30, 750);
+            margin-bottom: vw(12, 750);
         }
         &__content {
             line-height: (30/16);
@@ -223,7 +235,7 @@
         &__access {
             .col-md-4 {
                 &:not(:last-child) {
-                    margin-bottom: vw(140, 750);
+                    margin-bottom: vw(146, 750);
                 }
             }
         }
