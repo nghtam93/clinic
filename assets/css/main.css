@@ -1444,7 +1444,10 @@ header.sticky-header {
     header nav.navbar-expand-md .navbar-collapse .navbar-nav li a {
       padding: 10px 20px !important; }
     header .footer-bar {
-      font-size: 13px; } }
+      font-size: 13px; }
+
+  body:not(.home) header {
+    padding: 15px 0 15px 20px; } }
 @media (max-width: 1023px) {
   header {
     transition: 0.3s; }
