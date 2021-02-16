@@ -531,7 +531,7 @@ $pages: 'access', 'clinic', 'information', 'information-detail', 'service', 'sta
   }
 
   .visca-clinic-page {
-    margin-bottom: 20% !important;
+    margin-bottom: vw(242, 750) !important;
     [class*="col-"] {
       &:not(:last-child) {
         margin-bottom: vw(60, 750);
@@ -543,13 +543,17 @@ $pages: 'access', 'clinic', 'information', 'information-detail', 'service', 'sta
         width: vw(426, 750);
       }
       span {
-        padding-top: vw(20, 750);
+        padding-top: vw(26, 750);
+        letter-spacing: vw(3.6, 750);
       }
     }
   }
 
   .mb-sp-120 {
     margin-bottom: vw(120, 750) !important;
+  }
+  .mb-sp-166 {
+    margin-bottom: vw(166, 750) !important;
   }
   .mb-sp-174 {
     margin-bottom: vw(174, 750) !important;

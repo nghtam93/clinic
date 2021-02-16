@@ -888,7 +888,7 @@ h3 {
       border-right: 0.4vw solid #fff; }
 
   .visca-clinic-page {
-    margin-bottom: 20% !important; }
+    margin-bottom: 32.2666666667vw !important; }
     .visca-clinic-page [class*="col-"]:not(:last-child) {
       margin-bottom: 8vw; }
     .visca-clinic-page a {
@@ -896,10 +896,14 @@ h3 {
       .visca-clinic-page a img {
         width: 56.8vw; }
       .visca-clinic-page a span {
-        padding-top: 2.6666666667vw; }
+        padding-top: 3.4666666667vw;
+        letter-spacing: 0.48vw; }
 
   .mb-sp-120 {
     margin-bottom: 16vw !important; }
+
+  .mb-sp-166 {
+    margin-bottom: 22.1333333333vw !important; }
 
   .mb-sp-174 {
     margin-bottom: 23.2vw !important; } }
@@ -1335,7 +1339,8 @@ header.sticky-header {
           header nav.navbar-expand-md .navbar-collapse .navbar-nav.load-end.show-menu li a span {
             transform: translateX(0); }
       header nav .navbar-brand img {
-        max-width: 277px; }
+        max-width: 277px;
+        width: 100%; }
     header .main-banner {
       width: 79.3%; }
     header .main-title {
@@ -3227,9 +3232,6 @@ footer .copyright {
   border-radius: 30px; }
   .sec-traffic__content .sec__title--small {
     color: #be724a; }
-  @media (max-width: 767pxc) {
-    .sec-traffic__content {
-      border-radius: 4vw; } }
 .sec-traffic__list__item {
   text-align: center;
   border: 1px dashed #be724a; }
@@ -3308,23 +3310,28 @@ footer .copyright {
 @media (max-width: 767px) {
   .sec-traffic__content {
     padding: 5.8823529412vw 12.6666666667vw 9.3333333333vw;
-    margin-bottom: 3.7333333333vw; }
+    margin-bottom: 3.7333333333vw;
+    border-radius: 4vw; }
     .sec-traffic__content h2 {
       margin-bottom: 3.7333333333vw; }
   .sec-traffic__list__item {
     width: 100%;
-    padding: 5.3333333333vw 6.6666666667vw;
+    padding: 5.3333333333vw 5.3333333333vw 4.5333333333vw;
     border-radius: 4vw; }
     .sec-traffic__list__item:not(:last-child) {
-      margin-bottom: 5.3333333333vw; }
-    .sec-traffic__list__item img {
-      max-width: 18%; }
+      margin-bottom: 4.2666666667vw; }
+    .sec-traffic__list__item:first-child img {
+      width: 10vw; }
+    .sec-traffic__list__item:nth-child(2) img {
+      width: 12.9333333333vw; }
+    .sec-traffic__list__item:nth-child(3) img {
+      width: 11.3333333333vw; }
   .sec-traffic__thumb {
     margin-bottom: 1.8666666667vw; }
   .sec-traffic__info {
-    letter-spacing: 0.3466666667vw; }
+    letter-spacing: 0.32vw; }
     .sec-traffic__info h4 {
-      padding-bottom: 2.1333333333vw;
+      padding-bottom: 1.6vw;
       margin-bottom: 2.6666666667vw;
       font-size: 3.2vw;
       letter-spacing: 0.2666666667vw; }

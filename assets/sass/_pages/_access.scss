@@ -46,9 +46,6 @@
         .sec__title--small {
             color: #be724a;
         }
-        @media ( max-width: 767pxc ) {
-            border-radius: vw(30, 750);
-        }
     }
     &__list {
         &__item {
@@ -190,6 +187,7 @@
         &__content {
             padding: vw(50, 850) vw(95, 750) vw(70, 750);
             margin-bottom: vw(28, 750);
+            border-radius: vw(30, 750);
             h2 {
                 margin-bottom: vw(28, 750);
             }
@@ -197,13 +195,25 @@
         &__list {
             &__item {
                 width: 100%;
-                padding: vw(40, 750) vw(50, 750);
+                padding: vw(40, 750) vw(40, 750) vw(34, 750);
                 border-radius: vw(30, 750);
                 &:not(:last-child) {
-                    margin-bottom: vw(40, 750);
+                    margin-bottom: vw(32, 750);
                 }
-                img {
-                    max-width: 18%;
+                &:first-child {
+                    img {
+                        width: vw(75, 750);
+                    }
+                }
+                &:nth-child(2) {
+                    img {
+                        width: vw(97, 750);
+                    }
+                }
+                &:nth-child(3) {
+                    img {
+                        width: vw(85, 750);
+                    }
                 }
             }
         }
@@ -211,9 +221,9 @@
             margin-bottom: vw(14, 750);
         }
         &__info {
-            letter-spacing: vw(2.6, 750);
+            letter-spacing: vw(2.4, 750);
             h4 {
-                padding-bottom: vw(16, 750);
+                padding-bottom: vw(12, 750);
                 margin-bottom: vw(20, 750);
                 font-size: vw(24, 750);
                 letter-spacing: vw(2, 750);
