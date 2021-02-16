@@ -9,7 +9,7 @@
     .button {
         text-align: center;
         margin-top: 93px;
-        margin-bottom: 30px;
+        margin-bottom: 33px;
         @media (max-width: 767px) {
             margin-top: vw(140, 750);
             margin-bottom: vw(40, 750);
@@ -79,20 +79,20 @@
 @media (min-width: 768px) {
     .sec-accessmap {
         img {
-            max-width: 53%;
+            max-width: 60%;
         }
     }
 
     .sec-traffic {
         .sec__title--small {
             font-size: 30px;
-            margin-bottom: 20px;
+            margin-bottom: 26px;
         }
         &__list {
             &__item {
                 width: calc((100% - 48px) / 3);
                 border-radius: 30px;
-                padding: 25px 3%;
+                padding: 21px 3%;
                 &:not(:last-child) {
                     margin-right: 24px;
                 }
@@ -100,26 +100,41 @@
             h4 {
                 font-size: 18px;
                 line-height: (30/18);
-                padding-bottom: 8px;
-                margin-bottom: 15px;
+                padding-bottom: 4px;
+                margin-bottom: 12px;
+                letter-spacing: 2px;
             }
         }
         &__thumb {
-            margin-bottom: 10px;
+            margin-bottom: 5px;
             img {
                 width: auto;
                 max-height: 100%;
             }
         }
+        &__info {
+            letter-spacing: 1.6px;
+            line-height: 1.9;
+        }
+    }
+
+    .sec-courtyard {
+        .sec__title {
+            margin-bottom: 61px;
+        }
+        .map-info__text {
+            letter-spacing: 1.6px;
+            line-height: 1.9;
+        }
     }
 
     .item-access {
         &__thumb {
-            margin-bottom: 12px;
+            margin-bottom: 14px;
         }
         &__content {
             line-height: (30/16);
-            letter-spacing: 1px;
+            letter-spacing: 1.8px;
             .desc {
                 margin-right: 10px;
             }
@@ -130,7 +145,7 @@
         &__access {
             .col-md-4 {
                 &:nth-child(n + 4) {
-                    margin-top: 40px;
+                    margin-top: 32px;
                 }
             }
         }
@@ -140,7 +155,7 @@
 @media ( min-width: 992px ) {
     .sec-traffic {
         &__content {
-            padding: 35px 8.5% 40px;
+            padding: 35px 6.5% 45px;
         }
         &__thumb {
             height: 62px;
@@ -226,14 +241,9 @@
             }
         }
         dd {
+            border-bottom: 1px solid #454443;
             &:nth-child(2) {
                 padding-top: 0;
-            }
-            &:not(:last-child) {
-                border-bottom: 1px solid #454443;
-            }
-            &:last-child {
-                padding-bottom: 0;
             }
             a {
                 color: #454443;
@@ -253,7 +263,7 @@
                 }
             }
             dd {
-                padding: 15px 8px 15px 0;
+                padding: 15px 0;
                 &:nth-child(2) {
                     padding-top: 0;
                 }
@@ -276,6 +286,14 @@
 }
 
 @media (max-width: 991px) and (min-width: 768px) {
+    .sec-traffic {
+        &__list {
+            font-size: 14px;
+            h4 {
+                font-size: 16px;
+            }
+        }
+    }
     .sec-courtyard {
         dl {
             dt {

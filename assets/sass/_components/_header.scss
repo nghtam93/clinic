@@ -130,39 +130,70 @@ header {
     }
   }
   .main-banner {
+    position: relative;
+    overflow: hidden;
     @media ( min-width: 1024px ) {
       padding-top: 8px;
       margin-bottom: 109px !important;
     }
+    &__slider {
+      mask-size: 100% 100%;
+      -webkit-mask-size: 100% 100%;
+      mask-repeat:no-repeat;
+      -webkit-mask-repeat:no-repeat;
+      @media ( min-width: 768px ) {
+        mask-image:url("../images/main_mark.png");
+        -webkit-mask-image:url("../images/main_mark.png");
+        margin-bottom: 3.5% !important;
+      }
+      @media ( max-width: 767px ) {
+        mask-image:url("../images/main_mark_sp.png");
+        -webkit-mask-image:url("../images/main_mark_sp.png");
+        margin-bottom: vw(180, 750) !important;
+      }
+    }
     .slick-slide {
       overflow: hidden;
       position: relative;
-      padding-bottom: 0.6%;
       img {
+        position: relative;
         width: 100%;
+        z-index: 1;
       }
-      div {
-        &.main-copy {
-          position: absolute;
-          bottom: 0;
-          left: 7.5%;
-          max-width: 30%;
-        }
+      >img {
+        width: auto;
+        max-width: calc(100% + 100px);
       }
       &:focus {
         outline: none;
       }
       &.slick-active {
         >img {
-          -webkit-animation: transMain 8s ease-in-out;
-          animation: transMain 8s ease-in-out;
-        }
-        div {
-          &.main-copy {
-            -webkit-animation: fadeMain 1s ease-in-out;
-            animation: fadeMain 1s ease-in-out;
+          @media ( min-width: 768px ) {
+            -webkit-animation: transMainPc 6s ease-in-out;
+            animation: transMainPc 6s ease-in-out;
+          }
+          @media ( max-width: 767px ) {
+            -webkit-animation: transMainSp 6s ease-in-out;
+            animation: transMainSp 6s ease-in-out;
           }
         }
+      }
+    }
+    .main-copy {
+      position: absolute;
+      bottom: 0;
+      left: 7.5%;
+      z-index: 3;
+      @media ( min-width: 768px ) {
+        max-width: 30%;
+      }
+      @media ( max-width: 767px ) {
+        max-width: vw(380, 750);
+      }
+      &.show-main__copy {
+        -webkit-animation: fadeMain 1s ease-in-out;
+        animation: fadeMain 1s ease-in-out;
       }
     }
     .slick-dots {
@@ -317,6 +348,7 @@ header {
     }
     .main-title {
       width: 75.8%;
+      padding-top: 2%;
     }
     .footer-bar {
       ul {
@@ -337,10 +369,9 @@ header {
   body {
     &:not(.home) {
       header {
-        padding-right: 0;
-        align-items: center;
+        padding: 12px 0 6px 7%;
         justify-content: space-between;
-        margin-bottom: 40px;
+        margin-bottom: 0;
         .top-bar {
           display: none;
         }
@@ -558,6 +589,9 @@ header {
                 text-align: center;
                 line-height: 1;
                 border-bottom: 1px solid #d2cdc4;
+                &:before {
+                  display: none;
+                }
                 &:hover {
                   color: #5f4731;
                 }
@@ -641,9 +675,6 @@ header {
     }
     .main-banner {
       padding-top: 166px;
-      .slick-slide {
-        padding-bottom: 0.6%;
-      }
       .slick-dots {
         transform: translateY(50%);
       }
@@ -842,7 +873,6 @@ header {
       padding: vw(166, 750) vw(15, 750) 0;
       margin-bottom: vw(50, 750) !important;
       .slick-slide {
-        padding-bottom: vw(172, 750);
         div {
           &.main-copy {
             max-width: vw(380, 750);
@@ -939,9 +969,14 @@ header {
   100% {opacity: 1;transform: translateY(0);}
 }
 
-@keyframes transMain {
-  0% {transform: translateX(30px);}
-  100% {transform: translateX(-30px);}
+@keyframes transMainPc {
+  0% {transform: translateX(0);}
+  100% {transform: translateX(-90px);}
+}
+
+@keyframes transMainSp {
+  0% {transform: translateX(0);}
+  100% {transform: translateX(-60px);}
 }
 
 @keyframes lineMenu {

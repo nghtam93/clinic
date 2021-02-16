@@ -199,8 +199,9 @@ $pages: 'access', 'clinic', 'information', 'information-detail', 'service', 'sta
     }
   }
   .sec__title {
-    margin-bottom: 60px;
+    margin-bottom: 52px;
     padding-bottom: 20px;
+    letter-spacing: 4px;
     &:after {
       width: 100px;
       height: 2px;
@@ -262,8 +263,15 @@ $pages: 'access', 'clinic', 'information', 'information-detail', 'service', 'sta
     a {
       font-size: 18px;
       span {
-        padding-top: 10px;
+        padding-top: 6px;
+        letter-spacing: 1.8px;
       }
+    }
+  }
+
+  @for $i from 70 through 200 {
+    .mb-pc-#{$i} {
+      margin-bottom: #{$i}px !important;
     }
   }
 }
@@ -278,12 +286,13 @@ $pages: 'access', 'clinic', 'information', 'information-detail', 'service', 'sta
       max-width: 790px;
       display: table;
       text-align: center;
-      padding: 20px;
+      padding: 20px 20px 20px 40px;
       line-height: (80/64);
-      letter-spacing: 1px;
+      letter-spacing: 8px;
       span {
         font-size: 24px;
         margin-bottom: 10px;
+        letter-spacing: 3px;
       }
     }
   }
@@ -393,9 +402,11 @@ $pages: 'access', 'clinic', 'information', 'information-detail', 'service', 'sta
       font-size: 56px;
       text-align: center;
       padding: 20px;
+      letter-spacing: 6px;
       span {
         font-size: 20px;
         margin-bottom: 10px;
+        letter-spacing: 2px;
       }
     }
   }

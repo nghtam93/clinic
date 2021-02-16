@@ -6,9 +6,9 @@ $(function() {
         steen.scene.start();
       },
       start:function() {
-        var num = $('.main-banner .slide').length;
+        var num = $('.main-banner__slider .slide').length;
         var now = Math.ceil(Math.random()*num);
-        var scene = $('.main-banner').slick({
+        var scene = $('.main-banner__slider').slick({
           initialSlide: now - 1,
           autoplay: true,
           pauseOnHover: false,
@@ -20,16 +20,16 @@ $(function() {
           cssEase: 'cubic-bezier(0.455, 0.03, 0.515, 0.955)'
         });
 
-        $('.main-banner').on('setPosition', function(slick){
-          $('.main-banner .slide').eq(now).addClass('active');
+        $('.main-banner__slider').on('setPosition', function(slick){
+          $('.main-banner__slider .slide').eq(now).addClass('active');
         });
 
         scene.slick('setPosition');
 
-        $('.main-banner').on('afterChange', function(event, slick, currentSlide){
+        $('.main-banner__slider').on('afterChange', function(event, slick, currentSlide){
           for (var i=0;i<=num;i++) {
             if(i != currentSlide-1) {
-              $('.main-banner .slide').eq(i).removeClass('active');
+              $('.main-banner__slider .slide').eq(i).removeClass('active');
             }
           }
         });
@@ -91,6 +91,10 @@ $(window).on('load', function() {
   setTimeout(function(){ 
     $('.navbar-nav.load-end').addClass('show-menu')
   }, 2500);
+
+  setTimeout(function(){ 
+    $('.main-banner .main-copy').addClass('show-main__copy')
+  }, 1000);
 })
 
 $(document).ready(function(){
