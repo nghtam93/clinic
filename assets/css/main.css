@@ -1125,13 +1125,15 @@ header .footer-bar {
     header .footer-bar ul li a:hover {
       opacity: 0.8; }
 header nav.navbar {
+  position: relative;
   margin: 0 auto;
   padding: 5px 0 42px;
   -webkit-transition: .3s;
   -moz-transition: .3s;
   -ms-transition: .3s;
   -o-transition: .3s;
-  transition: .3s; }
+  transition: .3s;
+  z-index: 2; }
   @media (min-width: 768px) {
     header nav.navbar {
       max-width: 100%; } }
@@ -1196,7 +1198,8 @@ header nav .navbar-brand {
   transition: 0.3s; }
 header .main-banner {
   position: relative;
-  overflow: hidden; }
+  overflow: hidden;
+  z-index: 1; }
   @media (min-width: 1024px) {
     header .main-banner {
       padding-top: 8px;
