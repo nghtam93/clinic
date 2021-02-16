@@ -98,11 +98,11 @@ $(window).on('load', function() {
 })
 
 var navPos = $('.navbar').offset().top;
-var footerPos = $('footer').offset().top;
-$(window).on('load, scroll',function() {    
+$(window).on('load, scroll',function() {
   var scroll = $(window).scrollTop();
-  var hidePos = scroll + $('navbar').outerHeight(true) + $(window).height();
-  console.log(scroll, hidePos, footerPos);
+  var footerPos = $('footer').offset().top;
+  var hidePos = scroll + $('.navbar').height() + 100;
+  console.log(scroll, footerPos, hidePos);
   if( scroll >= navPos ) {
     $('.navbar').addClass('nav-fixed');
   } else {
@@ -110,7 +110,9 @@ $(window).on('load, scroll',function() {
   }
   if( $('body').hasClass('home') ) {
     if( hidePos >= footerPos ) {
-      $('.navbar').fadeOut();
+      $('.navbar').hide();
+    } else {
+      $('.navbar').show();
     }
   }
 });

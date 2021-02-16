@@ -361,7 +361,9 @@ header {
         top: 0;
         left: 7%;
         z-index: 999;
-        max-height: 90vh;
+        height: 100%;
+        max-height: 95vh;
+        padding-bottom: 0;
         overflow-y: auto;
         -ms-overflow-style: none;  /* IE and Edge */
         scrollbar-width: none;  /* Firefox */
@@ -481,6 +483,9 @@ header {
               }
             }
           }
+        }
+        &.nav-fixed {
+          left: 20px;
         }
       }
       &.navbar-expand-md {
@@ -727,7 +732,9 @@ header {
     header {
       nav {
         &.navbar {
-          height: 166px;
+          &:not(.active) {
+            height: 166px;
+          }
           .navbar-toggler {
             right: auto;
             left: 30px;
@@ -829,7 +836,7 @@ header {
         height: vw(90, 750);
         .navbar-toggler {
           width: vw(45, 750);
-          top: vw(22, 750);
+          top: vw(40, 750);
           right: vw(30, 750);
           font-size: vw(22, 750);
           span {
@@ -1008,7 +1015,9 @@ header {
             max-width: vw(277, 750);
           }
           &.navbar {
-            height: vw(129, 750);
+            &:not(.active) {
+              height: vw(129, 750);
+            }
           }
         }
       }

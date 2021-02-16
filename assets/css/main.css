@@ -1371,7 +1371,9 @@ header.sticky-header {
         top: 0;
         left: 7%;
         z-index: 999;
-        max-height: 90vh;
+        height: 100%;
+        max-height: 95vh;
+        padding-bottom: 0;
         overflow-y: auto;
         -ms-overflow-style: none;
         /* IE and Edge */
@@ -1431,6 +1433,8 @@ header.sticky-header {
         margin: 0 15px; }
         header nav.navbar ul.navbar-nav li a {
           font-size: 14px; }
+      header nav.navbar.nav-fixed {
+        left: 20px; }
     header nav.navbar-expand-md .navbar-collapse .navbar-nav li a {
       padding: 10px 20px !important; }
     header .footer-bar {
@@ -1607,14 +1611,14 @@ header.sticky-header {
       header .company-info ul {
         justify-content: center; }
 
-  body.home header nav.navbar {
+  body.home header nav.navbar:not(.active) {
     height: 166px; }
-    body.home header nav.navbar .navbar-toggler {
-      right: auto;
-      left: 30px;
-      top: 95px; }
-    body.home header nav.navbar.active .navbar-toggler {
-      top: 30px; }
+  body.home header nav.navbar .navbar-toggler {
+    right: auto;
+    left: 30px;
+    top: 95px; }
+  body.home header nav.navbar.active .navbar-toggler {
+    top: 30px; }
 
   body:not(.home) header nav.navbar {
     border-bottom: 1px solid #c6c3bd; } }
@@ -1664,7 +1668,7 @@ header.sticky-header {
     height: 12vw; }
     header nav.navbar .navbar-toggler {
       width: 6vw;
-      top: 2.9333333333vw;
+      top: 5.3333333333vw;
       right: 4vw;
       font-size: 2.9333333333vw; }
       header nav.navbar .navbar-toggler span {
@@ -1773,7 +1777,7 @@ header.sticky-header {
   body:not(.home) header nav .navbar-brand {
     margin: 6.6666666667vw auto;
     max-width: 36.9333333333vw; }
-  body:not(.home) header nav.navbar {
+  body:not(.home) header nav.navbar:not(.active) {
     height: 17.2vw; } }
 @keyframes fadeMain {
   0% {
@@ -4009,18 +4013,24 @@ footer .copyright {
     .sec-staff__info .sec__title {
       margin-bottom: 47px; }
   .sec-staff__introduction {
-    letter-spacing: 1.5px; }
+    letter-spacing: 1.5px;
+    line-height: 1.875; }
     .sec-staff__introduction.has-bg {
-      padding: 140px 0 170px; }
+      padding: 165px 0 185px; }
+    .sec-staff__introduction .sec__title {
+      margin-bottom: 62px; }
     .sec-staff__introduction .row:not(:last-child) {
-      margin-bottom: 45px; }
+      margin-bottom: 48px; }
     .sec-staff__introduction h3 {
-      margin-bottom: 20px; }
+      margin-bottom: 20px;
+      line-height: 1.4;
+      letter-spacing: 3px; }
     .sec-staff__introduction p:not(:last-child) {
       margin-bottom: 30px; }
     .sec-staff__introduction .staff-avatar {
-      width: 91%;
-      margin: 0 auto 30px; }
+      margin: 0 auto 42px;
+      padding-left: 6%;
+      padding-top: 3%; }
     .sec-staff__introduction .staff-info {
       line-height: 1.3; }
       .sec-staff__introduction .staff-info p:not(:last-child) {
@@ -4036,10 +4046,11 @@ footer .copyright {
         .sec-staff__introduction .staff-info__address span + span {
           margin-left: 25px; }
       .sec-staff__introduction .staff-info__name {
-        font-size: 40px; }
+        font-size: 40px;
+        letter-spacing: 5px; }
     .sec-staff__introduction--profile {
       position: relative;
-      padding-top: 35px; }
+      padding-top: 36px; }
       .sec-staff__introduction--profile:before {
         content: '';
         display: block;
@@ -4049,14 +4060,16 @@ footer .copyright {
         top: 0;
         border-top: 1px solid #454443; }
       .sec-staff__introduction--profile h3 {
-        padding-left: 20px; }
+        padding-left: 22px;
+        letter-spacing: 2px;
+        margin-bottom: 13px; }
       .sec-staff__introduction--profile .list-info {
-        padding: 0 25px 0 20px; }
+        padding: 0 20px 0 22px; }
         .sec-staff__introduction--profile .list-info li {
           position: relative;
           padding-left: 25px; }
           .sec-staff__introduction--profile .list-info li + li {
-            margin-top: 10px; }
+            margin-top: 12px; }
           .sec-staff__introduction--profile .list-info li:before {
             content: '';
             position: absolute;
