@@ -140,6 +140,7 @@
     display: table;
     color: #be724a;
     line-height: 1;
+    transition: 0.3s;
     .tel {
       a {
         display: flex;
@@ -148,7 +149,14 @@
         font-weight: bold;
         color: #be724a;
         text-decoration: none;
+        transition: 0.3s;
+        &:hover {
+          text-decoration: underline;
+        }
       }
+    }
+    &:hover {
+      background-color: rgba(#e3c5ac, 0.4);
     }
   }
 }
@@ -216,10 +224,25 @@
   .medical-list {
     &__item {
       font-weight: bold;
-      color: #5f4731;
+      a {
+        display: block;
+        text-decoration: none;
+        color: #5f4731;
+        transition: 0.3s;
+        img {
+          transition: 0.3s;
+        }
+        &:hover {
+          color: #c57638;
+          .item-image {
+            transform: scale(1.05);
+          }
+        }
+      }
       .item-image {
         border-radius: 50%;
         background-color: #f4eae1;
+        transition: 0.3s;
       }
     }
   }
@@ -302,6 +325,7 @@
 
 .sec-cooperate {
   .cooperate-item {
+    display: block;
     background-color: #f2efe7;
     color: rgba(#454443, 0.3);
   }
@@ -633,7 +657,9 @@
   .sec-facilities {
     padding: 96px 0 116px;
     background: url('../images/sec-facilities_bg01.png') no-repeat right center / contain;
-    margin-bottom: 0 !important;
+    &:not(.sec-introduction) {
+      margin-bottom: 0 !important;
+    }
     h2 {
       margin-bottom: 114px;
     }

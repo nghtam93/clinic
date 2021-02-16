@@ -124,8 +124,8 @@
           transform: translateY(-50%) rotate(45deg);
         }
         .item-thumb {
-          width: 216px;
-          margin-right: 25px;
+          width: 200px;
+          margin-right: 26px;
         }
         .item-content {
           flex: auto;
@@ -175,10 +175,6 @@
     .information-list {
       &__item {
         padding: 45px 5% 45px 0;
-        .item-thumb {
-          width: 216px;
-          margin-right: 25px;
-        }
         .item-content {
           width: calc(100% - 241px);
           max-width: 642px;

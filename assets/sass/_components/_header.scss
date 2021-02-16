@@ -256,6 +256,7 @@ header {
     padding: 18px 7%;
     nav {
       width: 20.7%;
+      transition: 0.3s;
       &.navbar-expand-md {
         display: block;
         margin: 0;
@@ -263,14 +264,16 @@ header {
           .navbar-nav {
             display: block;
             li {
+              line-height: 1;
               a {
                 padding: 19px 20px !important;
-                display: block;
+                display: inline-block;
                 overflow: hidden;
                 span {
                   display: block;
-                  transform: translateX(-100%);
-                  transition: 0.3s ease-in;
+                  padding-left: 0;
+                  transform: translateX(-250%);
+                  transition: transform 0.5s 0.5s, padding-left 0.3s ease-in;
                 }
                 &:after {
                   content: '';
@@ -281,6 +284,11 @@ header {
                   top: 0;
                   left: 4px;
                   transition: 0.5s;
+                }
+                &:hover {
+                  span {
+                    padding-left: 10px;
+                  }
                 }
               }
               &:nth-child(2) {
@@ -344,6 +352,27 @@ header {
         img {
           max-width: 277px;
           width: 100%;
+        }
+      }
+
+      &.nav-fixed {
+        position: fixed;
+        top: 0;
+        left: 7%;
+        z-index: 999;
+        max-height: 90vh;
+        overflow-y: auto;
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+        +.main-banner {
+          margin-left: 20.7%;
+        }
+        +.main-title {
+          margin-left: 24.2%;
+          margin-bottom: 120px;
+        }
+        &::-webkit-scrollbar {
+          display: none;
         }
       }
     }
