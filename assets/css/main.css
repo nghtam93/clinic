@@ -915,7 +915,13 @@ h3 {
     margin-bottom: 24vw !important; }
 
   .mb-sp-188 {
-    margin-bottom: 25.0666666667vw !important; } }
+    margin-bottom: 25.0666666667vw !important; }
+
+  .mb-sp-192 {
+    margin-bottom: 25.6vw !important; }
+
+  .mb-sp-200 {
+    margin-bottom: 26.6666666667vw !important; } }
 @media (max-width: 767px) and (min-width: 576px) {
   .container {
     max-width: 100%;
@@ -2440,7 +2446,10 @@ footer .copyright {
       .visca-clinic .qr-wrap img {
         max-width: 192px; }
       .visca-clinic .qr-wrap .button a {
-        max-width: 285px; } }
+        max-width: 285px; }
+      .visca-clinic .qr-wrap__col6 .button {
+        max-width: 240px;
+        margin: 10px auto 0; } }
 @media (min-width: 992px) {
   .sec-emphasis {
     min-height: 668px; }
@@ -2453,9 +2462,9 @@ footer .copyright {
   .visca-clinic__item .tel a img {
     max-width: 23px; }
   .visca-clinic__item .qr-wrap__col6:first-child {
-    padding-right: 15%; }
+    padding-right: 5%; }
   .visca-clinic__item .qr-wrap__col6:last-child {
-    padding-left: 15%; }
+    padding-left: 5%; }
 
   .sec-medical {
     padding: 120px 0 190px; }
@@ -4082,34 +4091,41 @@ footer .copyright {
           .sec-staff__introduction--profile .list-info li .time {
             margin-right: 35px; }
   .sec-staff__list .row:not(:last-child) {
-    margin-bottom: 75px; }
+    margin-bottom: 79px; }
   .sec-staff__list .col-md-8 + .col-md-12 {
     margin-top: 35px; }
   .sec-staff__list .col-md-4:nth-child(n+4) {
     margin-top: 33px; }
+  .sec-staff__list .sec__title {
+    margin-bottom: 40px; }
   .sec-staff__list__info {
-    letter-spacing: 1.5px; }
+    letter-spacing: 1.55px;
+    line-height: 1.9; }
   .sec-staff__list h3 {
-    margin-bottom: 25px; }
+    margin-bottom: 29px; }
   .sec-staff__list__item {
     border-radius: 30px; }
     .sec-staff__list__item .item-thumb {
-      margin-bottom: 15px;
+      margin-bottom: 18px;
       text-align: center; }
     .sec-staff__list__item .item-content {
-      letter-spacing: 1.5px; }
+      letter-spacing: 1.8px;
+      line-height: 1.9; }
       .sec-staff__list__item .item-content h4 {
-        padding-bottom: 15px;
-        line-height: 1.3;
-        margin-bottom: 15px;
+        padding-bottom: 14px;
+        line-height: 1.62;
+        margin-bottom: 12px;
         text-align: center;
         font-weight: normal; }
         .sec-staff__list__item .item-content h4 strong {
-          font-size: 24px; }
+          font-size: 24px;
+          letter-spacing: 5px; }
   .sec-staff__job {
-    letter-spacing: 1.5px; }
+    letter-spacing: 1.7px; }
+    .sec-staff__job .sec__title {
+      margin-bottom: 43px; }
     .sec-staff__job dl {
-      margin-top: 25px;
+      margin-top: 30px;
       border-radius: 30px; }
       .sec-staff__job dl dt {
         margin: 0;
@@ -4122,7 +4138,7 @@ footer .copyright {
           padding-top: 0; } }
 @media (min-width: 992px) {
   .sec-staff__list__item {
-    padding: 30px 30px 50px; }
+    padding: 30px 30px 55px; }
   .sec-staff__job dl {
     padding: 80px 10%; }
     .sec-staff__job dl dt {
@@ -4172,25 +4188,32 @@ footer .copyright {
         padding-left: 160px; } }
 @media (max-width: 767px) {
   .sec-staff__info {
-    letter-spacing: 0.2666666667vw; }
+    letter-spacing: 0.2933333333vw; }
+    .sec-staff__info .sec__title {
+      margin-bottom: 5.3333333333vw; }
   .sec-staff__introduction {
     letter-spacing: 0.2666666667vw; }
     .sec-staff__introduction.has-bg {
-      background-size: auto 100%;
-      padding: 22.6666666667vw 0 26.6666666667vw; }
+      background: url("../images/staff/sp_staff_bg001.png") no-repeat center center;
+      background-size: 100% 100%;
+      padding: 24.5333333333vw 0 20.5333333333vw; }
     .sec-staff__introduction .row:not(:last-child) {
-      margin-bottom: 7.4324324324vw; }
+      margin-bottom: 8.1081081081vw; }
     .sec-staff__introduction h3 {
       font-size: 4vw;
-      margin-bottom: 3.3333333333vw; }
+      margin-bottom: 3.3333333333vw;
+      letter-spacing: 1.5px;
+      line-height: 1.6; }
     .sec-staff__introduction p:not(:last-child) {
       margin-bottom: 4.6666666667vw; }
     .sec-staff__introduction .staff-avatar {
       width: 66.6666666667vw;
-      margin: 0 auto 2vw; }
+      margin: 0 auto 2.9333333333vw; }
     .sec-staff__introduction .staff-info {
-      line-height: 1.3;
-      margin-bottom: 6.6666666667vw; }
+      line-height: 1.42;
+      margin-bottom: 5.6vw; }
+      .sec-staff__introduction .staff-info .staff-info__name {
+        letter-spacing: 0.5333333333vw; }
       .sec-staff__introduction .staff-info p:not(:last-child) {
         margin-bottom: 0; }
       .sec-staff__introduction .staff-info__position {
@@ -4226,7 +4249,7 @@ footer .copyright {
           position: relative;
           padding-left: 5.3333333333vw; }
           .sec-staff__introduction--profile .list-info li + li {
-            margin-top: 10px; }
+            margin-top: 3.4666666667vw; }
           .sec-staff__introduction--profile .list-info li:before {
             content: '';
             position: absolute;
@@ -4267,6 +4290,8 @@ footer .copyright {
           font-size: 4vw; }
   .sec-staff__job {
     letter-spacing: 0.2666666667vw; }
+    .sec-staff__job .sec__title {
+      margin-bottom: 4.2666666667vw; }
     .sec-staff__job dl {
       margin-top: 4vw;
       border-radius: 4vw;

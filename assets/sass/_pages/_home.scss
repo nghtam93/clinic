@@ -876,6 +876,12 @@
           max-width: 285px;
         }
       }
+      &__col6 {
+        .button {
+          max-width: 240px;
+          margin: 10px auto 0;
+        }
+      }
     }
   }
 }
@@ -907,10 +913,10 @@
     .qr-wrap {
       &__col6 {
         &:first-child {
-          padding-right: 15%;
+          padding-right: 5%;
         }
         &:last-child {
-          padding-left: 15%;
+          padding-left: 5%;
         }
       }
     }
