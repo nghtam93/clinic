@@ -104,12 +104,15 @@
 @media ( min-width: 768px ) {
   .sec-list {
     &__info {
+      h2 {
+        margin-bottom: 57px;
+      }
       .info-item {
         line-height: (24/18);
         -webkit-box-shadow: 3px 5px 5px 0px rgba(63,41,29,0.4);
         -moz-box-shadow: 3px 5px 5px 0px rgba(63,41,29,0.4);
         box-shadow: 3px 5px 5px 0px rgba(63,41,29,0.4);
-        letter-spacing: 1px;
+        letter-spacing: 1.8px;
         &__icon {
           max-height: 30px;
           img {
@@ -125,26 +128,30 @@
   .sec-service-content {
     .row {
       &:not(:last-child) {
-        margin-bottom: 110px;
+        margin-bottom: 121px;
       }
     }
     .col-md-12 {
-      margin-top: 45px;
+      margin-top: 50px;
     }
     .col-md-6 {
       &:nth-child(n+3) {
-        margin-top: 100px;
+        margin-top: 87px;
       }
     }
     h3 {
-      margin-bottom: 50px;
-      padding-bottom: 18px;
+      margin-bottom: 51px;
+      padding-bottom: 19px;
+      letter-spacing: 0.5px;
     }
     .sec-service-content {
       &__info {
-        max-width: 475px;
+        max-width: 500px;
         width: 90%;
-        letter-spacing: 0;
+        letter-spacing: 0.2px;
+        padding-left: 17px;
+        transform: translateY(-14px);
+        line-height: 1.92;
         .txt-info {
           max-width: 375px;
           border-radius: 26px;
@@ -158,6 +165,9 @@
         }
       }
       &__thumb {
+        &.thumb-consult {
+          margin-top: 19px;
+        }
         .consult {
           width: 115px;
           height: 115px;
@@ -191,11 +201,12 @@
         h4 {
           margin-bottom: 30px;
           font-size: 30px;
+          letter-spacing: 2.5px;
         }
         .button {
           margin-top: 30px;
           a {
-            max-width: 292px;
+            max-width: 282px;
           }
         }
       }
@@ -203,31 +214,34 @@
         max-width: 489px;
         margin: 0 auto;
         .sec-service-content__thumb {
-          margin-bottom: 15px;
+          margin-bottom: 27px;
           padding: 0 24px;
         }
         .sec-service-content__info {
           width: 100%;
           max-width: 100%;
+          padding-left: 0;
         }
         h4 {
           font-size: 30px;
           line-height: (46/30);
-          padding: 0 40px 10px 15px;
-          margin-bottom: 20px;
-          letter-spacing: 2px;
+          padding: 0 40px 11px 15px;
+          margin-bottom: 18px;
+          letter-spacing: 3px;
         }
         .list-check {
           display: table;
-          margin: 0 auto 20px;
+          margin: 0 auto 9px;
         }
         .desc {
           padding: 0 15px;
+          letter-spacing: -0.5px;
         }
       }
     }
     .list-check {
-      margin-bottom: 24px;
+      margin-bottom: 12px;
+      letter-spacing: 1.4px;
     }
   }
 }
@@ -321,6 +335,14 @@
       }
     }
     .sec-service-content {
+      &__info {
+        .txt-info {
+          padding: 10px 15px;
+          span {
+            font-size: 24px;
+          }
+        }
+      }
       &__banner {
         min-height: 350px;
         h4 {
@@ -385,12 +407,12 @@
   .sec-service-content {
     .row {
       &:not(:last-child) {
-        margin-bottom: vw(125, 750);
+        margin-bottom: vw(134, 750);
       }
       &:not(.align-items-center) {
         .col-md-6 {
           &:not(:last-child) {
-            margin-bottom: vw(145, 750);
+            margin-bottom: vw(138, 750);
           }
         }
       }
@@ -400,12 +422,15 @@
     }
     h3 {
       letter-spacing: - vw(1.4, 750);
-      padding-bottom: vw(15, 750);
+      padding-bottom: vw(8, 750);
       margin-bottom: vw(35, 750);
     }
     .sec-service-content {
       &__thumb {
-        margin-bottom: vw(20, 750);
+        margin-bottom: vw(26, 750);
+        &.thumb-consult {
+          margin-top: vw(8, 750);
+        }
         .consult {
           position: relative;
           width: vw(139, 750);
@@ -422,11 +447,13 @@
         }
       }
       &__info {
+        letter-spacing: vw(0.4, 750);
         .txt-info {
           height: vw(62, 750);
           margin-top: vw(25, 750);
           border-radius: vw(32, 750);
           padding: vw(5, 750) vw(20, 750);
+          letter-spacing: vw(2, 750);
           span {
             font-size: vw(40, 750);
           }
@@ -434,7 +461,8 @@
       }
       &__banner {
         border-radius: vw(30, 750);
-        padding: vw(30, 750) vw(40, 750);
+        padding: vw(36, 750) vw(40, 750) vw(50, 750);
+        letter-spacing: vw(0.6, 750);
         &--first {
           background: url('../images/service/sp_service_bg001.png');
         }
@@ -445,6 +473,7 @@
         h4 {
           font-size: vw(40, 750);
           margin-bottom: vw(20, 750);
+          letter-spacing: vw(3.6, 750);
         }
         .button {
           margin-top: vw(25, 750);
@@ -458,6 +487,7 @@
         .sec-service-content__thumb {
           text-align: center;
           margin-bottom: vw(20, 750);
+          padding-right: vw(32, 750);
           img {
             width: vw(469, 750);
           }
@@ -473,7 +503,7 @@
     }
     .list-check {
       font-size: vw(36, 750);
-      margin-bottom: vw(20, 750);
+      margin-bottom: vw(16, 750);
       li {
         padding-left: vw(64, 750);
         img {

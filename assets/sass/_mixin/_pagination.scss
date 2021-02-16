@@ -16,11 +16,13 @@
         background-color: transparent;
         color: #4e3423;
         transition: 0.3s;
+        text-decoration: underline;
       }
       &.active, &:hover {
         .page-link {
           background-color: #4e3423;
-          color: #fff
+          color: #fff;
+          text-decoration: none;
         }
       }
       &__prev, &__next {
@@ -42,7 +44,7 @@
 
 @media ( min-width: 768px ) {
   .paginations {
-    margin-top: 30px;
+    margin-top: 29px;
     .pagination {
       max-width: 432px;
       height: 80px;
@@ -54,6 +56,11 @@
           height: 30px;
           line-height: 28px;
           font-size: 18px;
+        }
+        &__dots {
+          width: auto;
+          font-size: 24px;
+          transform: translateY(-5px);
         }
         &__prev {
           left: 25px;
@@ -68,7 +75,7 @@
 
 @media ( max-width: 767px ) {
   .paginations {
-    margin-top: vw(40, 750);
+    margin-top: vw(42, 750);
     .pagination {
       height: vw(144, 750);
       border-radius: vw(72, 750);
@@ -78,6 +85,10 @@
           height: vw(54, 750);
           line-height: vw(50, 750);
           font-size: vw(32, 750);
+        }
+        &__dots {
+          width: auto;
+          font-size: vw(30, 750);
         }
         &__prev {
           left: vw(30, 750);

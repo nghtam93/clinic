@@ -45,7 +45,11 @@
 @media ( min-width: 768px ) {
   .sec-staff {
     &__info {
-      letter-spacing: 1.5px;
+      letter-spacing: 1.8px;
+      line-height: 1.9;
+      .sec__title {
+        margin-bottom: 47px;
+      }
     }
     &__introduction {
       letter-spacing: 1.5px;

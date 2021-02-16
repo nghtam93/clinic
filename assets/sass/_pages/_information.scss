@@ -75,23 +75,29 @@
     padding: 0 5%;
     border-radius: 30px;
     &:not(.information-list) {
-      padding: 45px 5%;
+      padding: 52px 5.1% 63px;
     }
     .list-info {
       letter-spacing: 1px;
-      margin-bottom: 15px;
+      margin-bottom: 14px;
       .date {
         width: 115px;
         height: 25px;
         font-size: 13px;
         border-radius: 12.5px;
         margin-right: 20px;
+        letter-spacing: 1.2px;
       }
       .cat {
+        transform: translateY(-2px);
         .txt-info {
+          letter-spacing: 2px;
           &:after {
-            margin: 0 18px;
+            margin: 0 11px 0 14px;
           }
+        }
+        a {
+          letter-spacing: 1.2px;
         }
       }
     }
@@ -125,10 +131,12 @@
         }
         .item-thumb {
           width: 200px;
-          margin-right: 26px;
+          margin-right: 28px;
         }
         .item-content {
           flex: auto;
+          width: calc(100% - 228px);
+          max-width: 652px;
         }
       }
     }
@@ -138,12 +146,12 @@
         margin-bottom: 10px;
         a {
           line-height: (32/24);
-          letter-spacing: 2px;
+          letter-spacing: 2.5px;
           display: inherit;
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
         }
+      }
+      .desc {
+        letter-spacing: 1.8px;
       }
     }
   }
@@ -152,17 +160,21 @@
     .recent {
       &__title {
         font-size: 34px;
-        margin-bottom: 35px;
+        margin-bottom: 45px;
+        letter-spacing: 3.5px;
       }
       &__list {
         li {
           width: calc((100% - 24px) / 2);
-          padding: 0 0 8px 20px;
+          padding: 0 0 5px 20px;
           &:not(:nth-child(2n)) {
             margin-right: 24px;
           }
           &:nth-child(n+3) {
-            margin-top: 18px;
+            margin-top: 14px;
+          }
+          a {
+            letter-spacing: 2.3px;
           }
         }
       }
@@ -174,10 +186,11 @@
   .information-list {
     .information-list {
       &__item {
-        padding: 45px 5% 45px 0;
+        padding: 45px 5% 40px 0;
+        &:not(:last-child) {
+          margin-bottom: 3px;
+        }
         .item-content {
-          width: calc(100% - 241px);
-          max-width: 642px;
           &__title {
             a {
               font-size: 24px;
@@ -204,8 +217,20 @@
           &__title {
             a {
               font-size: 18px;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
             }
           }
+        }
+      }
+    }
+  }
+  .recent {
+    .recent {
+      &__list {
+        li {
+          padding-left: 5px;
         }
       }
     }
@@ -216,18 +241,21 @@
   .information-wrap {
     padding: vw(40, 750);
     border-radius: vw(30, 750);
+    &.information-detail {
+      padding: vw(54, 750) vw(40, 750) vw(66, 750);
+    }
     .list-info {
       margin-bottom: vw(10, 750);
       .date {
         width: vw(185, 750);
         height: vw(40, 750);
         border-radius: vw(20, 750);
-        margin-right: vw(12, 750);
+        margin-right: vw(16, 750);
       }
       .cat {
         .txt-info {
           &:after {
-            margin: 0 vw(25, 750);
+            margin: 0 vw(14, 750) 0 vw(25, 750);
           }
         }
       }
@@ -237,11 +265,11 @@
     .information-list {
       &__item {
         &:not(:last-child) {
-          padding-bottom: vw(80, 750);
-          margin-bottom: vw(80, 750);
+          padding-bottom: vw(56, 750);
+          margin-bottom: vw(82, 750);
         }
         .item-thumb {
-          margin-bottom: vw(25, 750);
+          margin-bottom: vw(26, 750);
         }
       }
     }
@@ -249,7 +277,13 @@
       letter-spacing: vw(2, 750);
       &__title {
         line-height: (50/30);
-        margin-bottom: vw(15, 750);
+        margin-bottom: vw(4, 750);
+        a {
+          letter-spacing: vw(3, 750);
+        }
+      }
+      .desc {
+        letter-spacing: vw(2.4, 750);
       }
     }
   }
@@ -257,15 +291,17 @@
   .recent {
     [class*="col-"] {
       &:not(:last-child) {
-        margin-bottom: vw(50, 750);
+        margin-bottom: vw(40, 750);
       }
     }
     .recent {
       &__title {
         font-size: vw(46, 750);
-        margin-bottom: vw(25, 750);
+        margin-bottom: vw(18, 750);
+        letter-spacing: vw(4.8, 750);
       }
       &__list {
+        letter-spacing: vw(3.8, 750);
         li {
           width: calc((100% - 10vw) / 2);
           padding: 0 0 vw(15, 750) 0;
@@ -273,7 +309,7 @@
             margin-right: 10vw;
           }
           &:nth-child(n+3) {
-            margin-top: vw(20, 750);
+            margin-top: vw(18, 750);
           }
         }
       }
